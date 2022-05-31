@@ -201,10 +201,16 @@ public class BluetoothService extends Service {
                                     recorded_data = new ArrayList<>();
                                     outputStream.writeBytes("Stop");
                                     while(speed.isEmpty()) {
-                                        String [] serverOutput = inputStream.readLine().split(",");
-                                        speed = serverOutput[0];
-                                        smoothness = serverOutput[1];
-                                        time = serverOutput[2];
+                                        String input = inputStream.readLine();
+                                        if(input != null) {
+                                            Log.d("Acknowledgment: ", input);
+                                            String[] serverOutput = input.split(",");
+                                            if (serverOutput.length == 3) {
+                                                speed = serverOutput[0];
+                                                smoothness = serverOutput[1];
+                                                time = serverOutput[2];
+                                            }
+                                        }
                                     }
                                 } catch (IOException e) {
                                     e.printStackTrace();

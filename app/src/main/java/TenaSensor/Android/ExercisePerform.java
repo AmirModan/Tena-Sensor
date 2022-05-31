@@ -90,6 +90,7 @@ public class ExercisePerform extends AppCompatActivity {
                 } else {
                     status.setText("You are all done with this exercise for today");
                     check.setVisibility(View.VISIBLE);
+                    complete = true;
                     finishTimer = new CountDownTimer(3000, 10) {
                         public void onTick(long millisUntilFinished) {}
                         public void onFinish() {
@@ -101,7 +102,6 @@ public class ExercisePerform extends AppCompatActivity {
                 }
                 trial++;
                 recording = false;
-                complete = true;
             }
         });
 
