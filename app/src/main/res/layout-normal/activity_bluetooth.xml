@@ -1,0 +1,275 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".MainActivity">
+    <!--Updated by Ricardo Colin 07/28/17-->
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="visible"
+                android:background="@color/colorText"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="Current Statistics"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/colorText"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout0"
+                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:layout_weight="0.25"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="4dp"
+                    android:paddingVertical="20dp"
+                    android:orientation="vertical"
+                    android:background= "#DDDDDD"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Speed"
+                        android:textColor="@color/colorBackground"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBackground"
+                        android:textSize="30dp"
+                        android:maxLines="1"
+                        android:id="@+id/speedBuffer"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="mm/s"
+                        android:textColor="@color/colorBackground"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:textStyle="bold"/>
+
+                </FrameLayout>
+
+                <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="4dp"
+                    android:paddingVertical="20dp"
+                    android:orientation="vertical"
+                    android:background= "#DDDDDD"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Smoothness"
+                        android:textColor="@color/colorBackground"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/smoothnessBuffer"
+                        android:textSize="30dp"
+                        android:maxLines="1"
+                        android:textColor="@color/colorBackground"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="sal"
+                        android:textColor="@color/colorBackground"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:textStyle="bold"/>
+
+                </FrameLayout>
+
+                <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="4dp"
+                    android:paddingVertical="20dp"
+                    android:orientation="vertical"
+                    android:background= "#DDDDDD"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Time"
+                        android:textColor="@color/colorBackground"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/timeBuffer"
+                        android:textSize="30dp"
+                        android:maxLines="1"
+                        android:textColor="@color/colorBackground"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ms"
+                        android:textColor="@color/colorBackground"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:textStyle="bold"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+
+            <EditText
+                android:id="@+id/ip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter IP Address"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/port"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Port Number"
+                android:inputType="phone" />
+
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:visibility="visible"
+                android:background="@color/colorText"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.45"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="90dp">
+
+                    <ImageView
+                        android:id="@+id/connected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/logo_green" />
+
+                    <ImageView
+                        android:id="@+id/disconnected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/logo_red" />
+
+                    <Button
+                        android:id="@+id/ToggleBluetooth"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"/>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/bt_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:text="Click the icon to connect your sensor"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorText"/>
+            </LinearLayout>
+
+
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:visibility="visible"
+                android:background="@color/colorText"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout02"
+                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:layout_weight="0.1"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:layout_marginVertical="10dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+                <Button
+                    android:id="@+id/CalibrateButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Calibrate Sensor"
+                    android:textColor="@color/colorBackground">
+                </Button>
+                <Button
+                    android:id="@+id/ExerciseButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Sensor Exercises"
+                    android:textColor="@color/colorBackground">
+                </Button>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "525684123912",
+    "project_id": "tenasensor",
+    "storage_bucket": "tenasensor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525684123912:android:dc8d4e97ddce066518e4bd",
+        "android_client_info": {
+          "package_name": "TenaSensor.Android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525684123912-6jvq7uasn08ljl5l5jprft7i8i9di5vk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrpLzfkWgYcNP6EgiT8v51HkwSCeYTXGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525684123912-6jvq7uasn08ljl5l5jprft7i8i9di5vk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
