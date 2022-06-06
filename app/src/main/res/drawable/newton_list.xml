@@ -8,6 +8,5 @@
     <item android:drawable="@drawable/newton_4" android:duration="200"/>
     <item android:drawable="@drawable/newton_5" android:duration="200"/>
     <item android:drawable="@drawable/newton_6" android:duration="200"/>
-    <item android:drawable="@drawable/newton_7" android:duration="200"/>
 
 </animation-list>
