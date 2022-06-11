@@ -32,6 +32,10 @@
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\mipmap-mdpi\\myocolors.png"
     },
     {
+        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_newton_4.png.flat",
+        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_4.png"
+    },
+    {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
@@ -40,16 +44,16 @@
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_newton_1.xml.flat",
-        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_1.xml"
-    },
-    {
-        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\layout-normal_activity_record_data.xml.flat",
-        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\layout-normal\\activity_record_data.xml"
+        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_newton_3.png.flat",
+        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_3.png"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_open_file.xml.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\ic_open_file.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\layout-normal_activity_record_data.xml.flat",
+        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\layout-normal\\activity_record_data.xml"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_add_button1.xml.flat",
@@ -78,10 +82,6 @@
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_toggle_sensor.xml.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\toggle_sensor.xml"
-    },
-    {
-        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_newton_2.xml.flat",
-        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_2.xml"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_fingertonose.png.flat",
@@ -124,6 +124,10 @@
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\toggleselector.xml"
     },
     {
+        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_newton_2.png.flat",
+        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_2.png"
+    },
+    {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\layout_linkedin_login.xml.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\layout\\linkedin_login.xml"
     },
@@ -132,8 +136,8 @@
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\emgdata_icon.xml"
     },
     {
-        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_newton_3.xml.flat",
-        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_3.xml"
+        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_login_firebase.xml.flat",
+        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\layout\\activity_login_firebase.xml"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_register_google.PNG.flat",
@@ -196,16 +200,16 @@
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\layout\\activity_register.xml"
     },
     {
+        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_newton_list.xml.flat",
+        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_list.xml"
+    },
+    {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_drinkglass.png.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\drinkglass.png"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_newton_list.xml.flat",
-        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_list.xml"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_cup_drinking_icon.png.flat",
@@ -218,6 +222,10 @@
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_newtonscradle1.png.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newtonscradle1.png"
+    },
+    {
+        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_newton_5.png.flat",
+        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_5.png"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\layout-normal_activity_instructions.xml.flat",
@@ -248,12 +256,12 @@
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\resources.png"
     },
     {
-        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_newton_5.xml.flat",
-        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_5.xml"
-    },
-    {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_tena_loadinggif_triangles.gif.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\tena_loadinggif_triangles.gif"
+    },
+    {
+        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\layout-normal_activity_create_account.xml.flat",
+        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\layout-normal\\activity_create_account.xml"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_sensor_disconnected.png.flat",
@@ -272,20 +280,20 @@
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_outreach_home.png.flat",
-        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\outreach_home.png"
-    },
-    {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_rod_placing_icon.png.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\rod_placing_icon.png"
     },
     {
-        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_logo_white.png.flat",
-        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\logo_white.png"
+        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_outreach_home.png.flat",
+        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\outreach_home.png"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_pouring_water_icon.png.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\pouring_water_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_logo_white.png.flat",
+        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\logo_white.png"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\layout-normal_fragment_classification.xml.flat",
@@ -322,10 +330,6 @@
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_rod.png.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\rod.png"
-    },
-    {
-        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_newton_6.xml.flat",
-        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_6.xml"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_register_linkedin.PNG.flat",
@@ -378,6 +382,10 @@
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_block.png.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\block.png"
+    },
+    {
+        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_newton_6.png.flat",
+        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_6.png"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\layout-normal_fragment_emg_armband.xml.flat",
@@ -436,16 +444,16 @@
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\ic_trash.xml"
     },
     {
-        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_newton_4.xml.flat",
-        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_4.xml"
-    },
-    {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_sfsugators.png.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\mipmap-mdpi\\sfsugators.png"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_messages_icon.png.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\messages_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_newton_1.png.flat",
+        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_1.png"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\layout-normal_fragment_emg.xml.flat",
@@ -474,10 +482,6 @@
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_newton_7.xml.flat",
-        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_7.xml"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_block_placing_icon.png.flat",

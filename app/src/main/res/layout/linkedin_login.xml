@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@color/colorBackground"
     tools:context=".LinkedInLogin">
     <EditText
         android:id="@+id/username"
@@ -14,6 +15,7 @@
         android:layout_marginRight="4pt"
         android:layout_marginLeft="4pt"
         android:layout_marginTop="10pt"
+        android:textColor="@color/colorText"
         android:hint="Username"/>
     <EditText
         android:id="@+id/password1"
@@ -22,6 +24,8 @@
         android:layout_marginTop="10pt"
         android:layout_marginLeft="4pt"
         android:layout_marginRight="4pt"
+        android:textColor="@color/colorText"
+        android:inputType="textPassword"
         android:hint="Password"/>
     <Button
         android:id="@+id/sign"

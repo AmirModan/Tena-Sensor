@@ -2603,7 +2603,6 @@ drawable newton_3
 drawable newton_4
 drawable newton_5
 drawable newton_6
-drawable newton_7
 drawable newton_list
 drawable newtonscradle
 drawable newtonscradle1
@@ -2783,6 +2782,8 @@ id bt_load
 id bt_sdcard
 id bt_status
 id bt_train
+id btn_login
+id btn_signup
 id button
 id buttonPanel
 id cache_measures
@@ -2881,6 +2882,7 @@ id easeOut
 id east
 id edit_query
 id elastic
+id email_editText
 id end
 id endToStart
 id end_padder
@@ -3070,6 +3072,7 @@ id parentPanel
 id parentRelative
 id parent_matrix
 id password1
+id passwordLogin
 id password_toggle
 id path
 id pathRelative
@@ -3353,10 +3356,12 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_bluetooth
 layout activity_calibration
+layout activity_create_account
 layout activity_exercise
 layout activity_instructions
 layout activity_list
 layout activity_login
+layout activity_login_firebase
 layout activity_main
 layout activity_record_data
 layout activity_register
@@ -3482,6 +3487,7 @@ mipmap myocolors
 mipmap sfsugators
 plurals mtrl_badge_content_description
 raw block_video
+raw keep
 raw welcome_sound
 string abc_action_bar_home_description
 string abc_action_bar_up_description
