@@ -7,6 +7,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * @author Amir Modan (amir5modan@gmail.com)
+ * Activity in which the user selects an exercise to perform
+ *
+ * Functions include:
+ *  Selcting one out of four exercises to perform
+ *  Exercises include:
+ *      Block Placing
+ *      Finger-to-Nose
+ *      Cup Drinking
+ *      Rod Placing
+ */
 public class ExerciseSelection extends AppCompatActivity {
 
     private Button blkBtn, wtrBtn, cupBtn, rodBtn, homeBtn;
