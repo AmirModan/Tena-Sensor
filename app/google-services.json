@@ -1,33 +1,330 @@
 {
   "project_info": {
-    "project_number": "525684123912",
-    "project_id": "tenasensor",
-    "storage_bucket": "tenasensor.appspot.com"
+    "project_number": "855402615060",
+    "firebase_url": "https://t-enaapp-6c468.firebaseio.com",
+    "project_id": "t-enaapp-6c468",
+    "storage_bucket": "t-enaapp-6c468.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:525684123912:android:dc8d4e97ddce066518e4bd",
+        "mobilesdk_app_id": "1:855402615060:android:1acd60726a489b82a13201",
         "android_client_info": {
           "package_name": "TenaSensor.Android"
         }
       },
       "oauth_client": [
         {
-          "client_id": "525684123912-6jvq7uasn08ljl5l5jprft7i8i9di5vk.apps.googleusercontent.com",
+          "client_id": "855402615060-4trvhemml151pl1pdiunglmf70ualse1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "TenaSensor.Android",
+            "certificate_hash": "dc88acba44975bb650db4a374f0df9caceb914a4"
+          }
+        },
+        {
+          "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDrpLzfkWgYcNP6EgiT8v51HkwSCeYTXGM"
+          "current_key": "AIzaSyBzjmY1fnGS1m2Ap9LOhIA_cVCGr0jF80g"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "525684123912-6jvq7uasn08ljl5l5jprft7i8i9di5vk.apps.googleusercontent.com",
+              "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855402615060:android:27e8033ff28006fea13201",
+        "android_client_info": {
+          "package_name": "com.example.outREACH"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855402615060-0e3j9nsdcrbksp2629srpjnbpli0lt5g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.outREACH",
+            "certificate_hash": "bade75b23a95db1cfe841a65019e24323c8fa6b7"
+          }
+        },
+        {
+          "client_id": "855402615060-2ivp5s1en7dsicpnn5umltp9j9pmq6rc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.outREACH",
+            "certificate_hash": "280855f69cf54b23522995745dc1181742628797"
+          }
+        },
+        {
+          "client_id": "855402615060-836am92i7r7o30kbm8pnv3t23bk6rn89.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.outREACH",
+            "certificate_hash": "a5169312e057e13c62dfa2395d3ab5302bc54460"
+          }
+        },
+        {
+          "client_id": "855402615060-9k5bcnisklf5hibf2rk9d7ter0taahjn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.outREACH",
+            "certificate_hash": "1713ff513d5f4e65b9744a7a2538b1d2fb8db375"
+          }
+        },
+        {
+          "client_id": "855402615060-cc6ec0gbbnujil4u725pha48euvae9r4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.outREACH",
+            "certificate_hash": "79b4705714523af81d50c9f9d58d9e1510e75e37"
+          }
+        },
+        {
+          "client_id": "855402615060-f7ras9hdqrjdluvveuq36dpdae6dl27n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.outREACH",
+            "certificate_hash": "3ee30f18f844d88c2cff901a4327f4adc193d8db"
+          }
+        },
+        {
+          "client_id": "855402615060-fiqgj3440eoountebpsnma2hnfrn4s10.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.outREACH",
+            "certificate_hash": "23b4323ef98ad902f5b81bf1a2ba415d0d79e775"
+          }
+        },
+        {
+          "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzjmY1fnGS1m2Ap9LOhIA_cVCGr0jF80g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855402615060:android:e7c246513a4d93d0a13201",
+        "android_client_info": {
+          "package_name": "tena.health.clinician"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzjmY1fnGS1m2Ap9LOhIA_cVCGr0jF80g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855402615060:android:b8af70f970ca65eda13201",
+        "android_client_info": {
+          "package_name": "tena.health.clinician.prod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzjmY1fnGS1m2Ap9LOhIA_cVCGr0jF80g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855402615060:android:6851f720ec36f27fa13201",
+        "android_client_info": {
+          "package_name": "tena.health.clinician.qa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzjmY1fnGS1m2Ap9LOhIA_cVCGr0jF80g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855402615060:android:10cca3e96c10ee63a13201",
+        "android_client_info": {
+          "package_name": "tena.health.outreach"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzjmY1fnGS1m2Ap9LOhIA_cVCGr0jF80g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855402615060:android:0985ab1f81b00875a13201",
+        "android_client_info": {
+          "package_name": "tena.health.patient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzjmY1fnGS1m2Ap9LOhIA_cVCGr0jF80g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855402615060:android:70012b9a14d54be4a13201",
+        "android_client_info": {
+          "package_name": "tena.health.patient.prod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzjmY1fnGS1m2Ap9LOhIA_cVCGr0jF80g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855402615060:android:cc6bcac0ce2a2bb9a13201",
+        "android_client_info": {
+          "package_name": "tena.health.patient.qa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzjmY1fnGS1m2Ap9LOhIA_cVCGr0jF80g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855402615060-vhude428cdg16j7hnovpmq05bv2v9g1g.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
