@@ -28,10 +28,19 @@ import java.util.Set;
 import java.util.UUID;
 
 /**
- * Created by User on 2/28/2017.
+ * @author Amir Modan (amir5modan@gmail.com)
+ * Fragment which acts as the home page for the T'ena Sensor App
+ *
+ * Functions include:
+ *  Connecting to existing T'ena Sensor by clicking on red logo (No setup required)
+ *  Connecting to new T'ena Sensor by clicking on settings icon (Setup required)
+ *  Disconnecting to an already connected T'ena Sensor by clicking on green logo
+ *  Initiating T'ena Sensor calibration process
+ *  Navigating to exercise selection screen
+ *  Displaying trial statistics after exercises have been completed
  */
-
 public class BluetoothConnect extends Fragment {
+
     // GUI Components
     private TextView mSpeedBuffer, mSmoothnessBuffer, mTimeBuffer;
     private ImageView connectedImage, disconnectedImage;
@@ -40,25 +49,10 @@ public class BluetoothConnect extends Fragment {
     private ArrayAdapter<String> mBTArrayAdapter;
 
     private Handler mHandler; // Our main handler that will receive callback notifications
-    private BluetoothSocket mBTSocket = null; // bi-directional client-to-client data path
-    //private SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
 
-    private static final UUID BTMODULEUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"); // "random" unique identifier
-
-
-    // #defines for identifying shared types between calling functions
-    private final static int REQUEST_ENABLE_BT = 1; // used to identify adding bluetooth names
-    private final static int MESSAGE_READ = 2; // used in bluetooth handler to identify message update
-    private final static int CONNECTING_STATUS = 3; // used in bluetooth handler to identify message status
-
-
-    private static final String TAG = "Tab2Fragment";
-
-    Activity activity;
     private TextView status;
     private Button bluetoothButton, exerciseButton, calibrateButton;
     private static boolean connected = false;
-    public static String speed = "";
 
     private String name, address;
     private String filename;
@@ -114,11 +108,17 @@ public class BluetoothConnect extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        // Gets extras from previous class
         Intent intent = getActivity().getIntent();
         Bundle bundle = intent.getExtras();
+
+        // Instantiate GUI components
         mSpeedBuffer = (TextView) view.findViewById(R.id.speedBuffer);
         mSmoothnessBuffer = (TextView) view.findViewById(R.id.smoothnessBuffer);
         mTimeBuffer = (TextView) view.findViewById(R.id.timeBuffer);
+
+        // Fields for entering IP and Port Number (not for final app)
         EditText text = view.findViewById(R.id.ip);
         text.setText(ip);
         EditText textPort = view.findViewById(R.id.port);
@@ -130,9 +130,9 @@ public class BluetoothConnect extends Fragment {
         mBTAdapter = BluetoothAdapter.getDefaultAdapter(); // get a handle on the bluetooth radio
 
         mHandler = new Handler();
-        activity = this.getActivity();
         mStatusChecker.run();
 
+        //
         try {
             filename = bundle.getString(exercise) + ".txt";
         } catch (Exception e) {
@@ -148,6 +148,7 @@ public class BluetoothConnect extends Fragment {
             }
         }
 
+        // Toggle connection to T'ena Sensor
         bluetoothButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -155,6 +156,7 @@ public class BluetoothConnect extends Fragment {
             }
         });
 
+        // Navigate to ExerciseSelection.java, the exercise selection activity
         exerciseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -169,6 +171,7 @@ public class BluetoothConnect extends Fragment {
             }
         });
 
+        // Navigate to SensorCalibration.java, the sensor calibration activity
         calibrateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -177,6 +180,7 @@ public class BluetoothConnect extends Fragment {
             }
         });
 
+        // When directed from T'ena Sensor setup activity (BluetoothSelection.java), retains Bluetooth connection
         if(bundle != null && !connected){
             name = bundle.getString(nameKey);
             address = bundle.getString(addressKey);
@@ -184,9 +188,18 @@ public class BluetoothConnect extends Fragment {
         }
     }
 
+    /**
+     * Updates the connection status of the T'ena Sensor
+     * @param deviceConnected Boolean describing whether or not the sensor is connected
+     */
     public static void updateView(boolean deviceConnected) {
         connected = deviceConnected;
     }
+
+    /**
+     * Gets the current exercise
+     * @return A string representing the current exercise
+     */
     public static String getExercise() {
         return exercise;
     }
