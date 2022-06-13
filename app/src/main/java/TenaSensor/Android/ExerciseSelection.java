@@ -21,7 +21,8 @@ import android.widget.Button;
  */
 public class ExerciseSelection extends AppCompatActivity {
 
-    private Button blkBtn, wtrBtn, cupBtn, rodBtn, homeBtn;
+    // Declare Exercise Buttons
+    private Button blkBtn, ftnBtn, cupBtn, rodBtn, homeBtn;
     private static String exercise = "Exercise";
 
     @Override
@@ -29,58 +30,77 @@ public class ExerciseSelection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise);
 
+        // Assign button models to views
         blkBtn = (Button)findViewById(R.id.block_button);
-        wtrBtn = (Button)findViewById(R.id.water_button);
+        ftnBtn = (Button)findViewById(R.id.water_button);
         cupBtn = (Button)findViewById(R.id.cup_button);
         rodBtn = (Button)findViewById(R.id.rod_button);
 
+        // Set Action Bar
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.header);
 
+        // Assign home button model to view
         homeBtn = (Button)findViewById(R.id.home_button);
 
+        // When Home Button is clicked
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Goes to Home Page
                 Intent intent = new Intent(ExerciseSelection.this, MainActivity.class);
                 ExerciseSelection.this.startActivity(intent);
             }
         });
 
+        // When Block Exercise Button is clicked
         blkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Save exercise as BlockPlacing
                 exercise = "BlockPlacing";
+
+                // Navigate to Instructions for Block Placing
                 Intent intent = new Intent(ExerciseSelection.this, ExerciseInstructions.class);
                 intent.putExtra(BluetoothConnect.getExercise(), exercise);
                 ExerciseSelection.this.startActivity(intent);
             }
         });
 
-        wtrBtn.setOnClickListener(new View.OnClickListener() {
+        // When Finger-to-Nose Exercise Button is clicked
+        ftnBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Save exercise as FingerToNose
                 exercise = "FingerToNose";
+
+                // Navigate to Instructions for Finger-to-Nose
                 Intent intent = new Intent(ExerciseSelection.this, ExerciseInstructions.class);
                 intent.putExtra(BluetoothConnect.getExercise(), exercise);
                 ExerciseSelection.this.startActivity(intent);
             }
         });
 
+        // When Cup Exercise Button is clicked
         cupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 exercise = "CupDrinking";
+
+                // Navigate to Instructions for Cup Drinking
                 Intent intent = new Intent(ExerciseSelection.this, ExerciseInstructions.class);
                 intent.putExtra(BluetoothConnect.getExercise(), exercise);
                 ExerciseSelection.this.startActivity(intent);
             }
         });
 
+        // When Rod Exercise Button is clicked
         rodBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 exercise = "RodPlacing";
+
+                // Navigate to Instructions for Rod Placing
                 Intent intent = new Intent(ExerciseSelection.this, ExerciseInstructions.class);
                 intent.putExtra(BluetoothConnect.getExercise(), exercise);
                 ExerciseSelection.this.startActivity(intent);
@@ -88,6 +108,10 @@ public class ExerciseSelection extends AppCompatActivity {
         });
     }
 
+    /**
+     * Gets the exercise selected for this activity
+     * @return A string representing the selected exercise
+     */
     public static String getExercise() {
         return exercise;
     }
