@@ -52,7 +52,6 @@ public class ExercisePerform extends AppCompatActivity {
         status = (TextView)findViewById(R.id.countdown_status);
         reps = (TextView)findViewById(R.id.repetitions);
         stopBtn = (Button)findViewById(R.id.stop);
-        homeBtn = (Button)findViewById(R.id.home_button);
         stopExerciseBtn = (Button)findViewById(R.id.stopExercise);
         contExerciseBtn = (Button)findViewById(R.id.continueExercise);
         newton = (ImageView) findViewById(R.id.newton);
@@ -69,6 +68,7 @@ public class ExercisePerform extends AppCompatActivity {
         // Set Action Bar
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.header);
+        homeBtn = (Button)findViewById(R.id.home_button);
 
         // Assign models to circular timers
         mProgressBar = (ProgressBar) findViewById(R.id.progressbar_timerview);

@@ -80,11 +80,11 @@ public class ExerciseInstructions extends AppCompatActivity {
 
         // Assign button models to views
         startBtn = (Button)findViewById(R.id.StartExerciseButton);
-        homeBtn = (Button)findViewById(R.id.home_button);
 
         // Set Action Bar
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.header);
+        homeBtn = (Button)findViewById(R.id.home_button);
 
         // When Home Button is clicked
         homeBtn.setOnClickListener(new View.OnClickListener() {

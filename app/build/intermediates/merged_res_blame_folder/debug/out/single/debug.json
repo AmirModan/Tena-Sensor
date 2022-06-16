@@ -48,12 +48,12 @@
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_3.png"
     },
     {
-        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\layout-normal_activity_record_data.xml.flat",
-        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\layout-normal\\activity_record_data.xml"
-    },
-    {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_open_file.xml.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\ic_open_file.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\layout-normal_activity_record_data.xml.flat",
+        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\layout-normal\\activity_record_data.xml"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_add_button1.xml.flat",
@@ -128,12 +128,12 @@
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\newton_2.png"
     },
     {
-        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_emgdata_icon.xml.flat",
-        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\emgdata_icon.xml"
-    },
-    {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\layout_linkedin_login.xml.flat",
         "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\layout\\linkedin_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\drawable_emgdata_icon.xml.flat",
+        "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\drawable\\emgdata_icon.xml"
     },
     {
         "merged": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_login_firebase.xml.flat",
