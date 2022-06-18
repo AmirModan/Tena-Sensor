@@ -36,15 +36,19 @@
 
             <ImageView
                 android:id="@+id/newton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginVertical="30dp"
-                android:adjustViewBounds="true" />
+                android:layout_width="424px"
+                android:layout_height="479px"
+                android:layout_gravity="center"
+                android:layout_margin="70dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="30dp"
+                android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
                 android:visibility="invisible"
                 android:src="@drawable/newtonscradle"
