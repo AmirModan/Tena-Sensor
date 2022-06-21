@@ -36,10 +36,9 @@
 
             <ImageView
                 android:id="@+id/newton"
-                android:layout_width="424px"
-                android:layout_height="479px"
+                android:layout_width="636px"
+                android:layout_height="718px"
                 android:layout_gravity="center"
-                android:layout_margin="70dp"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
                 />
