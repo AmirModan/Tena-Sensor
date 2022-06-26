@@ -1,10 +1,8 @@
-#Fri Jun 17 19:53:58 PDT 2022
-path.4=classes3.dex
+#Sun Jun 26 15:53:00 PDT 2022
 path.3=classes2.dex
 path.2=3/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
-base.4=C\:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
 base.3=C\:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 base.2=C\:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
 base.1=C\:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
@@ -13,4 +11,3 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-renamed.4=classes5.dex

@@ -3466,7 +3466,6 @@ mipmap myocolors
 mipmap sfsugators
 plurals mtrl_badge_content_description
 raw block_video
-raw keep
 raw welcome_sound
 string abc_action_bar_home_description
 string abc_action_bar_up_description
