@@ -3,7 +3,6 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdk 32
-//buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "TenaSensor.Android"
@@ -12,9 +11,6 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
-//        jackOptions {
-//            enabled true
-//        }
     }
 
     buildTypes {
@@ -37,25 +33,26 @@ allprojects {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'com.google.firebase:firebase-auth:21.0.3'
+    implementation 'com.google.firebase:firebase-auth:21.0.6'
     androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.5.0'
-    testImplementation 'junit:junit:4.12'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    testImplementation 'junit:junit:4.13.2'
 
-    implementation 'com.amazonaws:aws-android-sdk-core:2.2.+'
-    implementation 'com.amazonaws:aws-android-sdk-lambda:2.2.+'
+    implementation 'com.amazonaws:aws-android-sdk-core:2.4.4'
+    implementation 'com.amazonaws:aws-android-sdk-lambda:2.2.22'
+    implementation "commons-logging:commons-logging-api:1.1"
 
     implementation 'androidx.percentlayout:percentlayout:1.0.0'
 
     implementation'com.android.volley:volley:1.2.1'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
     implementation 'org.apache.commons:commons-math3:3.6.1'
-    implementation 'com.google.android.gms:play-services-auth:20.1.0'
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
 }
 
 buildscript {
@@ -67,18 +64,3 @@ buildscript {
         classpath 'me.tatarka:gradle-retrolambda:3.6.1'
     }
 }
-
-// Required because retrolambda is on maven central
-//repositories {
-//    mavenCentral()
-//}
-
-//apply plugin: 'me.tatarka.retrolambda'
-
-/*
-android {
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-}*/

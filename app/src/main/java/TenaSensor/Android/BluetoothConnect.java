@@ -3,10 +3,12 @@ package TenaSensor.Android;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +17,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.Set;
+
+import com.amazonaws.mobileconnectors.lambdainvoker.*;
+import com.amazonaws.auth.CognitoCachingCredentialsProvider;
+import com.amazonaws.regions.Regions;
 
 /**
  * @author Amir Modan (amir5modan@gmail.com)
@@ -125,6 +132,45 @@ public class BluetoothConnect extends Fragment {
 
         mHandler = new Handler();
         mStatusChecker.run();
+
+        // Create an instance of CognitoCachingCredentialsProvider
+        CognitoCachingCredentialsProvider cognitoProvider = new CognitoCachingCredentialsProvider(this.getContext(), "us-east-1:68a62898-4649-4512-ba39-cdeae41bca18", Regions.US_EAST_1);
+
+    // Create LambdaInvokerFactory, to be used to instantiate the Lambda proxy.
+        LambdaInvokerFactory factory = new LambdaInvokerFactory(this.getContext(),
+                Regions.US_EAST_1, cognitoProvider);
+
+        // Create the Lambda proxy object with a default Json data binder.
+        // You can provide your own data binder by implementing
+        // LambdaDataBinder.
+        final AWS_Interface myInterface = factory.build(AWS_Interface.class);
+
+        AWS_Request request = new AWS_Request("Amir", "Modan");
+        // The Lambda function invocation results in a network call.
+        // Make sure it is not called from the main thread.
+        new AsyncTask<AWS_Request, Void, AWS_Response>() {
+            @Override
+            protected AWS_Response doInBackground(AWS_Request... params) {
+                // invoke "echo" method. In case it fails, it will throw a
+                // LambdaFunctionException.
+                try {
+                    return myInterface.TenaFunction1(params[0]);
+                } catch (LambdaFunctionException lfe) {
+                    Log.e("Tag", "Failed to invoke echo", lfe);
+                    return null;
+                }
+            }
+
+            @Override
+            protected void onPostExecute(AWS_Response result) {
+                if (result == null) {
+                    return;
+                }
+
+                // Do a toast
+                Toast.makeText(BluetoothConnect.this.getContext(), result.getGreetings(), Toast.LENGTH_LONG).show();
+            }
+        }.execute(request);
 
         //
         try {
