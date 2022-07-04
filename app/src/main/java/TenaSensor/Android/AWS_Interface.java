@@ -8,5 +8,5 @@ public interface AWS_Interface {
      * The function name is the method name.
      */
     @LambdaFunction
-    AWS_Response TenaFunction1(AWS_Request request);
+    AWS_Response TenaFunction(AWS_Request request);
 }

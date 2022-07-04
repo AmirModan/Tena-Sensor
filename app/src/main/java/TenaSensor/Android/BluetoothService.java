@@ -17,6 +17,11 @@ import android.os.Message;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.amazonaws.auth.CognitoCachingCredentialsProvider;
+import com.amazonaws.mobileconnectors.lambdainvoker.LambdaFunctionException;
+import com.amazonaws.mobileconnectors.lambdainvoker.LambdaInvokerFactory;
+import com.amazonaws.regions.Regions;
+
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -62,7 +67,7 @@ public class BluetoothService extends Service {
     private Socket socket;
 
     private List<String> recorded_data = new ArrayList<>();
-    private List<String> calibration_data = new ArrayList<>();
+    private List<Integer> data = new ArrayList<>();
     private String messageFragment = "";
     private static String speed = "";
     private static String smoothness = "";
@@ -144,48 +149,78 @@ public class BluetoothService extends Service {
                             }
                         }
                         recorded_data.add(readMessage);
-                        /*
-                        if(socket == null) {
-                            new AsyncTask<Void,Void,Void>(){
 
-                                @Override
-                                protected Void doInBackground(Void... params) {
+                        for(String message :  readMessage.split("\n")) {
+                            if(!messageFragment.isEmpty()) {
+                                message = messageFragment + message;
+                                messageFragment = "";
+                            }
+                            String[] splitMessage = message.split(", ");
+                            if(splitMessage.length == 7 && message.length() >= 60 && message.charAt(0) == ',') {
+                                double[] sample = new double[splitMessage.length];
+                                for(int i = 0; i < splitMessage.length; i++){
                                     try {
-                                        socket = new Socket(BluetoothConnect.ip , BluetoothConnect.port);
-                                        inputStream = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                                        //outputStream = new DataOutputStream(socket.getOutputStream());
-
-                                        out = new PrintWriter(socket.getOutputStream(),true);
-                                        out.println(5);
-                                        out.flush();
-
-                                    } catch (IOException e) {
+                                        sample[i] = Double.parseDouble(splitMessage[i]);
+                                    } catch (NumberFormatException e) {
                                         e.printStackTrace();
                                     }
-                                    return null;
                                 }
-                            }.execute();
+                                accx.add(sample[1]);
+                                accy.add(sample[2]);
+                                accz.add(sample[3]);
+                                gyrx.add(sample[4]);
+                                gyry.add(sample[5]);
+                                gyrz.add(sample[6]);
 
+                            } else if(splitMessage.length > 7) {
+                            }
+                            else {
+                                messageFragment = message;
+                            }
                         }
-                        if(socket != null) {
 
-                            new AsyncTask<Void,Void,Void>(){
-
-                                @Override
-                                protected Void doInBackground(Void... params) {
-
-                                    //out.flush();
-                                    out.println(5);
-                                    out.flush();
-                                    return null;
-                                }
-                            }.execute();
-
-
-                        }
-                         */
                     }
                     else if(ExercisePerform.isComplete()) {
+                        ExercisePerform.setComplete(false);
+                        // Create an instance of CognitoCachingCredentialsProvider
+                        CognitoCachingCredentialsProvider cognitoProvider = new CognitoCachingCredentialsProvider(getApplicationContext(), "us-east-1:68a62898-4649-4512-ba39-cdeae41bca18", Regions.US_EAST_1);
+
+                        // Create LambdaInvokerFactory, to be used to instantiate the Lambda proxy.
+                        LambdaInvokerFactory factory = new LambdaInvokerFactory(getApplicationContext(),
+                                Regions.US_EAST_1, cognitoProvider);
+
+                        // Create the Lambda proxy object with a default Json data binder.
+                        // You can provide your own data binder by implementing
+                        // LambdaDataBinder.
+                        final AWS_Interface myInterface = factory.build(AWS_Interface.class);
+
+                        AWS_Request request = new AWS_Request(accx);
+                        // The Lambda function invocation results in a network call.
+                        // Make sure it is not called from the main thread.
+                        new AsyncTask<AWS_Request, Void, AWS_Response>() {
+                            @Override
+                            protected AWS_Response doInBackground(AWS_Request... params) {
+                                // invoke "echo" method. In case it fails, it will throw a
+                                // LambdaFunctionException.
+                                try {
+                                    return myInterface.TenaFunction(params[0]);
+                                } catch (LambdaFunctionException lfe) {
+                                    Log.e("Tag", "Failed to invoke echo", lfe);
+                                    return null;
+                                }
+                            }
+
+                            @Override
+                            protected void onPostExecute(AWS_Response result) {
+                                if (result == null) {
+                                    return;
+                                }
+
+                                // Sends statistics to home page class
+                                BluetoothConnect.setStats(Float.toString(result.getSpeed()), Float.toString(result.getSmoothness()), Float.toString(result.getTime()));
+                            }
+                        }.execute(request);
+
                         new AsyncTask<Void,Void,Void>(){
                             @Override
                             protected Void doInBackground(Void... params) {
@@ -218,6 +253,12 @@ public class BluetoothService extends Service {
                                 return null;
                             }
                         }.execute();
+                        accx = new ArrayList<>();
+                        accy = new ArrayList<>();
+                        accz = new ArrayList<>();
+                        gyrx = new ArrayList<>();
+                        gyry = new ArrayList<>();
+                        gyrz = new ArrayList<>();
                     } else if(SensorCalibration.isCalibrating() != 0) {
                         for(String message :  readMessage.split("\n")) {
                             if(!messageFragment.isEmpty()) {
@@ -234,12 +275,12 @@ public class BluetoothService extends Service {
                                         e.printStackTrace();
                                     }
                                 }
-                                accx.add(sample[0]);
-                                accy.add(sample[1]);
-                                accz.add(sample[2]);
-                                gyrx.add(sample[3]);
-                                gyry.add(sample[4]);
-                                gyrz.add(sample[5]);
+                                accx.add(sample[1]);
+                                accy.add(sample[2]);
+                                accz.add(sample[3]);
+                                gyrx.add(sample[4]);
+                                gyry.add(sample[5]);
+                                gyrz.add(sample[6]);
 
                             } else if(splitMessage.length > 7) {
                             }

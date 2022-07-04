@@ -247,6 +247,10 @@ public class ExercisePerform extends AppCompatActivity {
         return complete;
     }
 
+    public static void setComplete(boolean isComplete) {
+        complete = isComplete;
+    }
+
     /**
      * Method for getting current trial
      * @return int for which trial is being performed

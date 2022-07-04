@@ -22,6 +22,8 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 import com.amazonaws.mobileconnectors.lambdainvoker.*;
@@ -70,14 +72,21 @@ public class BluetoothConnect extends Fragment {
     public static String ip = "192.168.1.133";
     public static int port = 8080;
 
+    private static String speed = "-";
+    private static String smoothness = "-";
+    private static String time = "-";
+
     Runnable mStatusChecker = new Runnable() {
         @Override
         public void run() {
-            if(BluetoothService.getOutputSpeed() != null) {
+            /*if(BluetoothService.getOutputSpeed() != null) {
                 mSpeedBuffer.setText(BluetoothService.getOutputSpeed());
                 mSmoothnessBuffer.setText((BluetoothService.getOutputSmoothness()));
                 mTimeBuffer.setText(BluetoothService.getOutputTime());
-            }
+            }*/
+            mSpeedBuffer.setText(speed);
+            mSmoothnessBuffer.setText(smoothness);
+            mTimeBuffer.setText(time);
             if(connected) {
                 connectedImage.setVisibility(View.VISIBLE);
                 disconnectedImage.setVisibility(View.INVISIBLE);
@@ -133,10 +142,11 @@ public class BluetoothConnect extends Fragment {
         mHandler = new Handler();
         mStatusChecker.run();
 
+        /*
         // Create an instance of CognitoCachingCredentialsProvider
         CognitoCachingCredentialsProvider cognitoProvider = new CognitoCachingCredentialsProvider(this.getContext(), "us-east-1:68a62898-4649-4512-ba39-cdeae41bca18", Regions.US_EAST_1);
 
-    // Create LambdaInvokerFactory, to be used to instantiate the Lambda proxy.
+        // Create LambdaInvokerFactory, to be used to instantiate the Lambda proxy.
         LambdaInvokerFactory factory = new LambdaInvokerFactory(this.getContext(),
                 Regions.US_EAST_1, cognitoProvider);
 
@@ -144,8 +154,14 @@ public class BluetoothConnect extends Fragment {
         // You can provide your own data binder by implementing
         // LambdaDataBinder.
         final AWS_Interface myInterface = factory.build(AWS_Interface.class);
-
-        AWS_Request request = new AWS_Request("Amir", "Modan");
+        List<Double> recorded_data = new ArrayList<>();
+        recorded_data.add(5.8);
+        recorded_data.add(7.3);
+        recorded_data.add(2.6);
+        recorded_data.add(1.1);
+        recorded_data.add(15.2);
+        recorded_data.add(21.5);
+        AWS_Request request = new AWS_Request(recorded_data);
         // The Lambda function invocation results in a network call.
         // Make sure it is not called from the main thread.
         new AsyncTask<AWS_Request, Void, AWS_Response>() {
@@ -154,7 +170,7 @@ public class BluetoothConnect extends Fragment {
                 // invoke "echo" method. In case it fails, it will throw a
                 // LambdaFunctionException.
                 try {
-                    return myInterface.TenaFunction1(params[0]);
+                    return myInterface.TenaFunction(params[0]);
                 } catch (LambdaFunctionException lfe) {
                     Log.e("Tag", "Failed to invoke echo", lfe);
                     return null;
@@ -167,10 +183,12 @@ public class BluetoothConnect extends Fragment {
                     return;
                 }
 
-                // Do a toast
-                Toast.makeText(BluetoothConnect.this.getContext(), result.getGreetings(), Toast.LENGTH_LONG).show();
+                //Toast.makeText(getContext(), result.getGreetings(), Toast.LENGTH_LONG).show();
+                speed = Float.toString(result.getSpeed());
+                smoothness = Float.toString(result.getSmoothness());
+                time = Float.toString(result.getTime());
             }
-        }.execute(request);
+        }.execute(request);*/
 
         //
         try {
@@ -234,6 +252,12 @@ public class BluetoothConnect extends Fragment {
      */
     public static void updateView(boolean deviceConnected) {
         connected = deviceConnected;
+    }
+
+    public static void setStats(String spd, String smth, String tm) {
+        speed = spd;
+        smoothness = smth;
+        time = tm;
     }
 
     /**

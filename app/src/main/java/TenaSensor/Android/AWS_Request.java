@@ -1,28 +1,17 @@
 package TenaSensor.Android;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AWS_Request {
-    String firstName;
-    String lastName;
+    private List<Double> recorded_data = new ArrayList<>();
 
-    public String getFirstName() {
-        return firstName;
-    }
+    public void setData(List<Double> data) { this.recorded_data = data; }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+    public List<Double> getData() { return recorded_data; }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public AWS_Request(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public AWS_Request(List<Double> data) {
+        this.recorded_data = data;
     }
 
     public AWS_Request() {
