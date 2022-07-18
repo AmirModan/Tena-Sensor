@@ -194,7 +194,7 @@ public class BluetoothService extends Service {
                         // LambdaDataBinder.
                         final AWS_Interface myInterface = factory.build(AWS_Interface.class);
 
-                        AWS_Request request = new AWS_Request(accx);
+                        AWS_Request request = new AWS_Request(accx, ExerciseSelection.getExercise(),1,1);
                         // The Lambda function invocation results in a network call.
                         // Make sure it is not called from the main thread.
                         new AsyncTask<AWS_Request, Void, AWS_Response>() {
