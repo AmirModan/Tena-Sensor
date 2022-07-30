@@ -122,7 +122,6 @@ public class ExercisePerform extends AppCompatActivity {
 
                     // Display checkmark image
                     check.setVisibility(View.VISIBLE);
-                    complete = true;
 
                     // After 3 seconds, return to exercise selection screen
                     finishTimer = new CountDownTimer(3000, 10) {
@@ -135,7 +134,9 @@ public class ExercisePerform extends AppCompatActivity {
                     finishTimer.start();
                 }
                 trial++;
+
                 recording = false;
+                complete = true;
             }
         });
 

@@ -67,15 +67,20 @@ public class BluetoothService extends Service {
     private Socket socket;
 
     private List<String> recorded_data = new ArrayList<>();
+    private List<Integer> data = new ArrayList<>();
     private String messageFragment = "";
     private static String speed = "";
     private static String smoothness = "";
     private static String time = "";
+    String format;
 
     private SignalDetector detector = new SignalDetector();
-    private List<List<Double>> accx, accy, accz, gyrx, gyry, gyrz;
-    private List<List<Double>> calib_data = new ArrayList<>();
-
+    private List<Double> accx = new ArrayList<>();
+    private List<Double> accy = new ArrayList<>();
+    private List<Double> accz = new ArrayList<>();
+    private List<Double> gyrx = new ArrayList<>();
+    private List<Double> gyry = new ArrayList<>();
+    private List<Double> gyrz = new ArrayList<>();
     private double[] calib_flat = {0,0,0,0,0,0};
     private double[] calib_side = {0,0,0,0,0,0};
     private int lag = 30;
@@ -99,16 +104,12 @@ public class BluetoothService extends Service {
             MAC_ADDRESS = (String) savedDevices.get("1");
         }
         //MAC_ADDRESS = "34:AB:95:E8:E4:36";
-        for(int i = 0; i < 6; i++) {
-            calib_data.add(new ArrayList<>());
-        }
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         Log.d("BT SERVICE", "SERVICE STARTED");
-
         bluetoothIn = new Handler() {
 
             public void handleMessage(Message msg) {
@@ -122,7 +123,7 @@ public class BluetoothService extends Service {
                     if(ExercisePerform.isRecording()) {
                         if(stream == null) {
                             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd-yyyy-hh-mm-ss");
-                            String format = simpleDateFormat.format(new Date());
+                            format = simpleDateFormat.format(new Date());
                             try {
                                 filename = ExerciseSelection.getExercise() + ExercisePerform.getTrial() + format + ".txt";
                             } catch (Exception e) {
@@ -150,24 +151,6 @@ public class BluetoothService extends Service {
                         }
                         recorded_data.add(readMessage);
 
-                        if(ExercisePerform.getTrial() == 1) {
-                            accx = new ArrayList<>();
-                            accy = new ArrayList<>();
-                            accz = new ArrayList<>();
-                            gyrx = new ArrayList<>();
-                            gyry = new ArrayList<>();
-                            gyrz = new ArrayList<>();
-
-                            for(int i = 1; i <= 5; i++) {
-                                accx.add(new ArrayList<>());
-                                accy.add(new ArrayList<>());
-                                accz.add(new ArrayList<>());
-                                gyrx.add(new ArrayList<>());
-                                gyry.add(new ArrayList<>());
-                                gyrz.add(new ArrayList<>());
-                            }
-                        }
-
                         for(String message :  readMessage.split("\n")) {
                             if(!messageFragment.isEmpty()) {
                                 message = messageFragment + message;
@@ -183,12 +166,12 @@ public class BluetoothService extends Service {
                                         e.printStackTrace();
                                     }
                                 }
-                                accx.get(ExercisePerform.getTrial()-1).add(sample[1]);
-                                accy.get(ExercisePerform.getTrial()-1).add(sample[2]);
-                                accz.get(ExercisePerform.getTrial()-1).add(sample[3]);
-                                gyrx.get(ExercisePerform.getTrial()-1).add(sample[4]);
-                                gyry.get(ExercisePerform.getTrial()-1).add(sample[5]);
-                                gyrz.get(ExercisePerform.getTrial()-1).add(sample[6]);
+                                accx.add(sample[1]);
+                                accy.add(sample[2]);
+                                accz.add(sample[3]);
+                                gyrx.add(sample[4]);
+                                gyry.add(sample[5]);
+                                gyrz.add(sample[6]);
 
                             } else if(splitMessage.length > 7) {
                             }
@@ -212,7 +195,12 @@ public class BluetoothService extends Service {
                         // LambdaDataBinder.
                         final AWS_Interface myInterface = factory.build(AWS_Interface.class);
 
-                        AWS_Request request = new AWS_Request(accx, ExerciseSelection.getExercise(),1,1);
+                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd-yyyy-hh-mm-ss");
+                        format = simpleDateFormat.format(new Date());
+
+                        AWS_Request request = new AWS_Request(accx, ExerciseSelection.getExercise(),ExercisePerform.getTrial()-1,1,
+                                Integer.parseInt(format.substring(6,10)), Integer.parseInt(format.substring(0,2)), Integer.parseInt(format.substring(3,5)),
+                                Float.parseFloat(format.substring(11,13)) + Float.parseFloat(format.substring(14,16))/60 + Float.parseFloat(format.substring(17))/3600);
                         // The Lambda function invocation results in a network call.
                         // Make sure it is not called from the main thread.
                         new AsyncTask<AWS_Request, Void, AWS_Response>() {
@@ -271,9 +259,14 @@ public class BluetoothService extends Service {
                                 return null;
                             }
                         }.execute();
-
+                        accx = new ArrayList<>();
+                        accy = new ArrayList<>();
+                        accz = new ArrayList<>();
+                        gyrx = new ArrayList<>();
+                        gyry = new ArrayList<>();
+                        gyrz = new ArrayList<>();
                     } else if(SensorCalibration.isCalibrating() != 0) {
-                        for(String message : readMessage.split("\n")) {
+                        for(String message :  readMessage.split("\n")) {
                             if(!messageFragment.isEmpty()) {
                                 message = messageFragment + message;
                                 messageFragment = "";
@@ -288,9 +281,12 @@ public class BluetoothService extends Service {
                                         e.printStackTrace();
                                     }
                                 }
-                                for(int i = 0; i < 6; i++) {
-                                    calib_data.add(new ArrayList<>());
-                                }
+                                accx.add(sample[1]);
+                                accy.add(sample[2]);
+                                accz.add(sample[3]);
+                                gyrx.add(sample[4]);
+                                gyry.add(sample[5]);
+                                gyrz.add(sample[6]);
 
                             } else if(splitMessage.length > 7) {
                             }
@@ -299,15 +295,15 @@ public class BluetoothService extends Service {
                             }
                         }
 
-                        if(calib_data.get(0).size() >= 300) {
+                        if(accx.size() >= 300) {
 
-                            Map<String, List> accxMap = detector.analyzeDataForSignals(calib_data.get(0), lag, threshold, influence);
-                            Map<String, List> acczMap = detector.analyzeDataForSignals(calib_data.get(2), lag, threshold, influence);
-                            Map<String, List> gyrzMap = detector.analyzeDataForSignals(calib_data.get(5), lag, threshold, influence);
-                            calib_data = new ArrayList<>();
-                            for(int i = 0; i < 6; i++) {
-                                calib_data.add(new ArrayList<>());
-                            }
+                            Map<String, List> accxMap = detector.analyzeDataForSignals(accx, lag, threshold, influence);
+                            Map<String, List> acczMap = detector.analyzeDataForSignals(accz, lag, threshold, influence);
+                            Map<String, List> gyrzMap = detector.analyzeDataForSignals(gyrz, lag, threshold, influence);
+
+                            accx = new ArrayList<>();
+                            accz = new ArrayList<>();
+                            gyrz = new ArrayList<>();
 
                             boolean calibration_failed = false;
 
@@ -339,19 +335,19 @@ public class BluetoothService extends Service {
                             if(!calibration_failed) {
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                                     if(SensorCalibration.isCalibrating() == 1) {
-                                        calib_flat[0] = calib_data.get(0).stream().mapToDouble(val -> val).average().orElse(0.0);
-                                        calib_flat[1] = calib_data.get(1).stream().mapToDouble(val -> val).average().orElse(0.0);
-                                        calib_flat[2] = calib_data.get(2).stream().mapToDouble(val -> val).average().orElse(0.0);
-                                        calib_flat[3] = calib_data.get(3).stream().mapToDouble(val -> val).average().orElse(0.0);
-                                        calib_flat[4] = calib_data.get(4).stream().mapToDouble(val -> val).average().orElse(0.0);
-                                        calib_flat[5] = calib_data.get(5).stream().mapToDouble(val -> val).average().orElse(0.0);
+                                        calib_flat[0] = accx.stream().mapToDouble(val -> val).average().orElse(0.0);
+                                        calib_flat[1] = accy.stream().mapToDouble(val -> val).average().orElse(0.0);
+                                        calib_flat[2] = accz.stream().mapToDouble(val -> val).average().orElse(0.0);
+                                        calib_flat[3] = gyrx.stream().mapToDouble(val -> val).average().orElse(0.0);
+                                        calib_flat[4] = gyry.stream().mapToDouble(val -> val).average().orElse(0.0);
+                                        calib_flat[5] = gyrz.stream().mapToDouble(val -> val).average().orElse(0.0);
                                     } else if(SensorCalibration.isCalibrating() == 2) {
-                                        calib_side[0] = calib_data.get(0).stream().mapToDouble(val -> val).average().orElse(0.0);
-                                        calib_side[1] = calib_data.get(1).stream().mapToDouble(val -> val).average().orElse(0.0);
-                                        calib_side[2] = calib_data.get(2).stream().mapToDouble(val -> val).average().orElse(0.0);
-                                        calib_side[3] = calib_data.get(3).stream().mapToDouble(val -> val).average().orElse(0.0);
-                                        calib_side[4] = calib_data.get(4).stream().mapToDouble(val -> val).average().orElse(0.0);
-                                        calib_side[5] = calib_data.get(5).stream().mapToDouble(val -> val).average().orElse(0.0);
+                                        calib_side[0] = accx.stream().mapToDouble(val -> val).average().orElse(0.0);
+                                        calib_side[1] = accy.stream().mapToDouble(val -> val).average().orElse(0.0);
+                                        calib_side[2] = accz.stream().mapToDouble(val -> val).average().orElse(0.0);
+                                        calib_side[3] = gyrx.stream().mapToDouble(val -> val).average().orElse(0.0);
+                                        calib_side[4] = gyry.stream().mapToDouble(val -> val).average().orElse(0.0);
+                                        calib_side[5] = gyrz.stream().mapToDouble(val -> val).average().orElse(0.0);
                                     }
                                 }
                             }
