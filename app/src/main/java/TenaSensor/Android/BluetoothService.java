@@ -72,7 +72,6 @@ public class BluetoothService extends Service {
     private static String speed = "";
     private static String smoothness = "";
     private static String time = "";
-    String format;
 
     private SignalDetector detector = new SignalDetector();
     private List<Double> accx = new ArrayList<>();
@@ -123,7 +122,7 @@ public class BluetoothService extends Service {
                     if(ExercisePerform.isRecording()) {
                         if(stream == null) {
                             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd-yyyy-hh-mm-ss");
-                            format = simpleDateFormat.format(new Date());
+                            String format = simpleDateFormat.format(new Date());
                             try {
                                 filename = ExerciseSelection.getExercise() + ExercisePerform.getTrial() + format + ".txt";
                             } catch (Exception e) {
@@ -195,12 +194,9 @@ public class BluetoothService extends Service {
                         // LambdaDataBinder.
                         final AWS_Interface myInterface = factory.build(AWS_Interface.class);
 
-                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd-yyyy-hh-mm-ss");
-                        format = simpleDateFormat.format(new Date());
+                        long unixTime = System.currentTimeMillis() / 1000L;
 
-                        AWS_Request request = new AWS_Request(accx, ExerciseSelection.getExercise(),ExercisePerform.getTrial()-1,1,
-                                Integer.parseInt(format.substring(6,10)), Integer.parseInt(format.substring(0,2)), Integer.parseInt(format.substring(3,5)),
-                                Float.parseFloat(format.substring(11,13)) + Float.parseFloat(format.substring(14,16))/60 + Float.parseFloat(format.substring(17))/3600);
+                        AWS_Request request = new AWS_Request(accx, accy, accz, gyrx, gyry, gyrz, ExerciseSelection.getExercise(),ExercisePerform.getTrial()-1,1,unixTime);
                         // The Lambda function invocation results in a network call.
                         // Make sure it is not called from the main thread.
                         new AsyncTask<AWS_Request, Void, AWS_Response>() {
