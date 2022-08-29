@@ -1,5 +1,15 @@
 package TenaSensor.Android;
 
+/**
+ * @author Amir Modan (amir5modan@gmail.com)
+ * Class which contains the object that handles Responses made to the app by AWS
+ *
+ * Data received from AWS include:
+ *  speed (Float)
+ *  smoothness (Float)
+ *  time (Float)
+ */
+
 public class AWS_Response {
     float speed, smoothness, time;
 

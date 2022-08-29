@@ -3,6 +3,22 @@ package TenaSensor.Android;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Amir Modan (amir5modan@gmail.com)
+ * Class which contains the object that handles Requests made by the app to AWS
+ *
+ * Data sent to AWS include:
+ *  accx (List of Doubles) - A List of Acceleration Samples collected by the sensor in the x-axis
+ *  accy (List of Doubles) - A List of Acceleration Samples collected by the sensor in the y-axis
+ *  accz (List of Doubles) - A List of Acceleration Samples collected by the sensor in the z-axis
+ *  gyrx (List of Doubles) - A List of Gyroscope Samples collected by the sensor in the x-axis
+ *  gyry (List of Doubles) - A List of Gyroscope Samples collected by the sensor in the y-axis
+ *  gyrz (List of Doubles) - A List of Gyroscope Samples collected by the sensor in the z-axis
+ *  exercise (String) - The Name of the exercise being performed
+ *  trial (Integer) - The current trial being performed, ranging from 1-5
+ *  id (Integer) - The ID of the user performing the trial
+ *  unixTime (Long) - The time at which the trial was performed, represented in UNIX Time
+ */
 public class AWS_Request {
     private List<Double> accx = new ArrayList<>();
     private List<Double> accy = new ArrayList<>();
