@@ -40,6 +40,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+/**
+ * @author Amir Modan (amir5modan@gmail.com)
+ * Service which establishes a bluetooth connection with the T'ena Sensor
+ *
+ * Functions include:
+ *  Receiving data from the T'ena Sensor via classic bluetooth
+ *  Saving data received from the sensor to a local .txt file
+ *  Sending trial data to AWS Lambda
+ *  Receiving trial statistics from AWS Lambda
+ */
+
 public class BluetoothService extends Service {
 
     final int handlerState = 0;                        //used to identify handler message

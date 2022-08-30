@@ -129,10 +129,11 @@ public class BluetoothConnect extends Fragment {
         mTimeBuffer = (TextView) view.findViewById(R.id.timeBuffer);
 
         // Fields for entering IP and Port Number (not for final app)
-        EditText text = view.findViewById(R.id.ip);
+        /*EditText text = view.findViewById(R.id.ip);
         text.setText(ip);
         EditText textPort = view.findViewById(R.id.port);
         textPort.setText(Integer.toString(port));
+         */
 
         super.onCreate(savedInstanceState);
 
@@ -218,12 +219,12 @@ public class BluetoothConnect extends Fragment {
         exerciseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!text.getText().toString().isEmpty()) {
+                /*if(!text.getText().toString().isEmpty()) {
                     ip = text.getText().toString();
                 }
                 if(!textPort.getText().toString().isEmpty()) {
                     port = Integer.parseInt(textPort.getText().toString());
-                }
+                }*/
                 Intent exerciseIntent = new Intent(getContext(), ExerciseSelection.class);
                 startActivity(exerciseIntent);
             }

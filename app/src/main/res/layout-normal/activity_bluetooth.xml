@@ -158,7 +158,7 @@
 
         </LinearLayout>
 
-
+        <!--
 
         <EditText
             android:id="@+id/ip"
@@ -174,7 +174,7 @@
             android:hint="Enter Port Number"
             android:inputType="phone" />
 
-
+        -->
 
         <View
             android:layout_width="fill_parent"
