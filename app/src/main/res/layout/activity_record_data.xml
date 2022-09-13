@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context=".MainActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:visibility="visible"
+        android:background="@color/colorText"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/countdown_status"
+            android:layout_width="fill_parent"
+            android:layout_height="300px"
+            android:gravity="center"
+            android:textColor="@color/colorText"
+            android:textSize="100px"/>
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/newton"
+                android:layout_width="636px"
+                android:layout_height="718px"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="30dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:visibility="invisible"
+                android:src="@drawable/newtonscradle"
+                />
+
+            <ImageView
+                android:id="@+id/hand_position"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:src="@drawable/hand_prone" />
+
+            <TextView
+                android:id="@+id/countdown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/colorText"
+                android:textSize="200px"/>
+
+            <ProgressBar
+                android:id="@+id/progressbar_timerview"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal|bottom"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/circle_timer2"/>
+
+            <ProgressBar
+                android:id="@+id/progressbar1_timerview"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal|center"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/circle_timer1"/>
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="top|center">
+
+                <TextView
+                    android:id="@+id/repetitions"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/colorText"
+                    android:textSize="100px"/>
+
+                <ProgressBar
+                    android:id="@+id/progressbar_repview"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:indeterminate="false"
+                    android:visibility="invisible"
+                    android:progressDrawable="@drawable/circle_timer2"/>
+
+                <ProgressBar
+                    android:id="@+id/progressbar1_repview"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal|center"
+                    android:indeterminate="false"
+                    android:visibility="invisible"
+                    android:progressDrawable="@drawable/circle_timer1"/>
+
+            </FrameLayout>
+
+
+
+            <Button
+                android:id="@+id/continueExercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:paddingVertical="20dp"
+                android:background="@color/colorButton"
+                android:text="Perform the next trial"
+                android:textColor="@color/colorBackground"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/check"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="80dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:visibility="invisible"
+                android:src="@drawable/checkmark" />
+
+        </FrameLayout>
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/stop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="20dp"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/colorButton"
+                android:text="Stop Data Collection"
+                android:textColor="@color/colorBackground"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/stopExercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:paddingVertical="20dp"
+                android:background="@color/colorButton"
+                android:text="Exit Exercise"
+                android:textColor="@color/colorBackground"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</RelativeLayout>
