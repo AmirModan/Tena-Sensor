@@ -116,7 +116,8 @@ public class BluetoothService extends Service {
             MAC_ADDRESS = (String) savedDevices.get("1");
             NAME = (String) savedDevices.get("2");
         }
-        Toast.makeText(getApplicationContext(), "Connecting to " + NAME, Toast.LENGTH_SHORT).show();
+        if(NAME != null)
+            Toast.makeText(getApplicationContext(), "Connecting to " + NAME, Toast.LENGTH_SHORT).show();
         //MAC_ADDRESS = "34:AB:95:E8:E4:36";
     }
 
@@ -393,8 +394,10 @@ public class BluetoothService extends Service {
         stopThread = true;
         if(connected)
             Toast.makeText(getApplicationContext(), "Disconnecting from " + NAME, Toast.LENGTH_SHORT).show();
-        else
-            Toast.makeText(getApplicationContext(), "Connection to " + NAME + " Failed", Toast.LENGTH_SHORT).show();
+        else {
+            if(NAME != null)
+                Toast.makeText(getApplicationContext(), "Connection to " + NAME + " Failed", Toast.LENGTH_SHORT).show();
+        }
         if(stream != null) {
             try {
                 stream.close();

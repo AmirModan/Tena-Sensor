@@ -98,8 +98,10 @@ public class BluetoothConnect extends Fragment {
             if(connected) {
                 connectedImage.setVisibility(View.VISIBLE);
                 disconnectedImage.setVisibility(View.INVISIBLE);
+                exerciseButton.setVisibility(View.VISIBLE);
                 status.setText("Your sensor is connected");
             } else {
+                exerciseButton.setVisibility(View.GONE);
                 connectedImage.setVisibility(View.INVISIBLE);
                 disconnectedImage.setVisibility(View.VISIBLE);
                 status.setText("Click the icon to connect your sensor");
