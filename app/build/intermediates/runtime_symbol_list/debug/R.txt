@@ -2653,6 +2653,7 @@ int id BT_Success_Image 0x7f080004
 int id BT_Success_Message 0x7f080005
 int id CTRL 0x7f080006
 int id CalibrateButton 0x7f080007
+int id ConnectButton 0x7f080273
 int id ConnectingView 0x7f080008
 int id ExerciseButton 0x7f080009
 int id ExerciseInstructions 0x7f08000a

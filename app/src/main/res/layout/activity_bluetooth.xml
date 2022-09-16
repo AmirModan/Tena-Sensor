@@ -266,6 +266,14 @@
                 android:text="Sensor Exercises"
                 android:textColor="@color/colorBackground">
             </Button>
+            <Button
+                android:id="@+id/ConnectButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Connect to Sensor"
+                android:textColor="@color/colorBackground">
+            </Button>
         </LinearLayout>
 
 

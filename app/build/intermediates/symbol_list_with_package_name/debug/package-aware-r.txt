@@ -2654,6 +2654,7 @@ id BT_Success_Image
 id BT_Success_Message
 id CTRL
 id CalibrateButton
+id ConnectButton
 id ConnectingView
 id ExerciseButton
 id ExerciseInstructions

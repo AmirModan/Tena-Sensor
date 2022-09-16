@@ -58,7 +58,7 @@ public class BluetoothConnect extends Fragment {
     private Handler mHandler; // Our main handler that will receive callback notifications
 
     private TextView status;
-    private Button bluetoothButton, exerciseButton, calibrateButton;
+    private Button bluetoothButton, exerciseButton, calibrateButton, connectButton;
     private static boolean connected = false;
 
     private String name, address;
@@ -99,9 +99,13 @@ public class BluetoothConnect extends Fragment {
                 connectedImage.setVisibility(View.VISIBLE);
                 disconnectedImage.setVisibility(View.INVISIBLE);
                 exerciseButton.setVisibility(View.VISIBLE);
+                calibrateButton.setVisibility(View.VISIBLE);
+                connectButton.setVisibility(View.GONE);
                 status.setText("Your sensor is connected");
             } else {
                 exerciseButton.setVisibility(View.GONE);
+                calibrateButton.setVisibility(View.GONE);
+                connectButton.setVisibility(View.VISIBLE);
                 connectedImage.setVisibility(View.INVISIBLE);
                 disconnectedImage.setVisibility(View.VISIBLE);
                 status.setText("Click the icon to connect your sensor");
@@ -119,6 +123,7 @@ public class BluetoothConnect extends Fragment {
         bluetoothButton = v.findViewById(R.id.ToggleBluetooth);
         exerciseButton = v.findViewById(R.id.ExerciseButton);
         calibrateButton = v.findViewById(R.id.CalibrateButton);
+        connectButton = v.findViewById(R.id.ConnectButton);
         connectedImage = v.findViewById(R.id.connected);
         disconnectedImage = v.findViewById(R.id.disconnected);
         status = v.findViewById(R.id.bt_status);
@@ -224,6 +229,18 @@ public class BluetoothConnect extends Fragment {
 
         // Toggle connection to T'ena Sensor
         bluetoothButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getContext().startService(new Intent(getContext(), BluetoothService.class));
+                if(NAME == null) {
+                    Intent bluetoothIntent = new Intent(getContext(), BluetoothSelection.class);
+                    startActivity(bluetoothIntent);
+                }
+            }
+        });
+
+        // Toggle connection to T'ena Sensor
+        connectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getContext().startService(new Intent(getContext(), BluetoothService.class));
