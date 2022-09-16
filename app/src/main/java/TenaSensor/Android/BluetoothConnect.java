@@ -1,8 +1,11 @@
 package TenaSensor.Android;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -24,6 +27,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import com.amazonaws.mobileconnectors.lambdainvoker.*;
@@ -76,6 +80,10 @@ public class BluetoothConnect extends Fragment {
     private static String smoothness = "-";
     private static String time = "-";
 
+    private String NAME, MAC_ADDRESS;
+
+    public static SharedPreferences sharedPreferences;
+
     Runnable mStatusChecker = new Runnable() {
         @Override
         public void run() {
@@ -122,6 +130,11 @@ public class BluetoothConnect extends Fragment {
         // Gets extras from previous class
         Intent intent = getActivity().getIntent();
         Bundle bundle = intent.getExtras();
+
+        sharedPreferences = getContext().getSharedPreferences("MAC", MODE_PRIVATE);
+        Map<String, ?> savedDevices = sharedPreferences.getAll();
+        MAC_ADDRESS = (String) savedDevices.get("1");
+        NAME = (String) savedDevices.get("2");
 
         // Instantiate GUI components
         mSpeedBuffer = (TextView) view.findViewById(R.id.speedBuffer);
@@ -212,6 +225,10 @@ public class BluetoothConnect extends Fragment {
             @Override
             public void onClick(View v) {
                 getContext().startService(new Intent(getContext(), BluetoothService.class));
+                if(NAME == null) {
+                    Intent bluetoothIntent = new Intent(getContext(), BluetoothSelection.class);
+                    startActivity(bluetoothIntent);
+                }
             }
         });
 

@@ -156,31 +156,31 @@ public class BluetoothSelection extends Activity {
 
             startService(new Intent(getApplicationContext(), BluetoothService.class));
 
-            Toast.makeText(getApplicationContext(), "Connecting to " + name, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "Connecting to " + name, Toast.LENGTH_SHORT).show();
 
             btTimer = new CountDownTimer(5000, 10) {
                 public void onTick(long millisUntilFinished) {
                     if(accepted == 1) {
-                        /*
                         SharedPreferences sharedPreferences = getSharedPreferences("MAC", MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putString("1", address);
+                        editor.putString("2", name);
                         editor.commit();
-                         */
+
                         cv.setVisibility(View.GONE);
                         tv.setVisibility(View.VISIBLE);
                         iv.setVisibility(View.VISIBLE);
                         bv.setVisibility(View.VISIBLE);
                     }
-                    else if(accepted == 0) {
+                    /*else if(accepted == 0) {
                         this.cancel();
                         Toast.makeText(getApplicationContext(), "Device Not Found", Toast.LENGTH_SHORT).show();
-                    }
+                    }*/
                 }
                 public void onFinish() {
-                    if(accepted != 1) {
+                    /*if(accepted != 1) {
                         Toast.makeText(getApplicationContext(), "Device Not Found", Toast.LENGTH_SHORT).show();
-                    }
+                    }*/
                 }
             };
             btTimer.start();
@@ -190,6 +190,11 @@ public class BluetoothSelection extends Activity {
     public static String getAddress() {
         return address;
     }
+
+    public static String getName() {
+        return name;
+    }
+
     public static void deviceAccepted(boolean deviceAccepted) {
         if(deviceAccepted) {
             accepted = 1;

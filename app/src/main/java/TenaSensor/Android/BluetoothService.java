@@ -64,7 +64,7 @@ public class BluetoothService extends Service {
     // SPP UUID service - this should work for most devices
     private static final UUID BTMODULEUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     // String for MAC address
-    private static String MAC_ADDRESS;
+    private static String MAC_ADDRESS, NAME;
 
     private String filename;
 
@@ -96,6 +96,7 @@ public class BluetoothService extends Service {
     private int lag = 30;
     private double threshold = 5;
     private double influence = 0;
+    private boolean connected = false;
 
     public static SharedPreferences sharedPreferences;
 
@@ -107,12 +108,15 @@ public class BluetoothService extends Service {
 
         if(BluetoothSelection.getAddress() != null) {
             MAC_ADDRESS = BluetoothSelection.getAddress();
+            NAME = BluetoothSelection.getName();
         }
         else {
             sharedPreferences = getSharedPreferences("MAC", MODE_PRIVATE);
             Map<String, ?> savedDevices = sharedPreferences.getAll();
             MAC_ADDRESS = (String) savedDevices.get("1");
+            NAME = (String) savedDevices.get("2");
         }
+        Toast.makeText(getApplicationContext(), "Connecting to " + NAME, Toast.LENGTH_SHORT).show();
         //MAC_ADDRESS = "34:AB:95:E8:E4:36";
     }
 
@@ -124,6 +128,10 @@ public class BluetoothService extends Service {
 
             public void handleMessage(Message msg) {
                 Log.d("DEBUG", "handleMessage");
+                if(!connected) {
+                    connected = true;
+                    Toast.makeText(getApplicationContext(), "Connected to " + NAME, Toast.LENGTH_SHORT).show();
+                }
                 if (msg.what == handlerState) {                       //if message is what we want
                     String readMessage = (String) msg.obj;                                                                // msg.arg1 = bytes from connect thread
                     recDataString.append(readMessage);
@@ -383,6 +391,10 @@ public class BluetoothService extends Service {
         super.onDestroy();
         bluetoothIn.removeCallbacksAndMessages(null);
         stopThread = true;
+        if(connected)
+            Toast.makeText(getApplicationContext(), "Disconnecting from " + NAME, Toast.LENGTH_SHORT).show();
+        else
+            Toast.makeText(getApplicationContext(), "Connection to " + NAME + " Failed", Toast.LENGTH_SHORT).show();
         if(stream != null) {
             try {
                 stream.close();
@@ -542,6 +554,7 @@ public class BluetoothService extends Service {
             Log.d("DEBUG BT", "IN CONNECTED THREAD RUN");
             byte[] buffer = new byte[256];
             int bytes;
+
 
             // Keep looping to listen for received messages
             while (true && !stopThread) {
