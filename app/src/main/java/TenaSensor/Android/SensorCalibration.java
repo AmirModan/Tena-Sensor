@@ -35,7 +35,7 @@ public class SensorCalibration extends AppCompatActivity {
         @Override
         public void run() {
             while (calibrating != 0) {
-                if (timeout) {
+                /*if (timeout) {
                     new Handler(Looper.getMainLooper()).post(new Runnable() {
                         @Override
                         public void run() {
@@ -47,7 +47,7 @@ public class SensorCalibration extends AppCompatActivity {
                         }
                     });
                     return;
-                }
+                }*/
             }
             cancelTimer();
             if(calibration_failed) {
