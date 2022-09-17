@@ -281,7 +281,7 @@ public class BluetoothService extends Service {
                         gyrx = new ArrayList<>();
                         gyry = new ArrayList<>();
                         gyrz = new ArrayList<>();
-                    } else if(SensorCalibration.isCalibrating() != 0) {
+                    } else if(SensorCalibration.isCalibrating() == 1 || SensorCalibration.isCalibrating() == 3) {
                         for(String message :  readMessage.split("\n")) {
                             if(!messageFragment.isEmpty()) {
                                 message = messageFragment + message;
@@ -310,7 +310,6 @@ public class BluetoothService extends Service {
                                 messageFragment = message;
                             }
                         }
-
                         if(accx.size() >= 300) {
 
                             Map<String, List> accxMap = detector.analyzeDataForSignals(accx, lag, threshold, influence);
@@ -347,7 +346,6 @@ public class BluetoothService extends Service {
                                     break;
                                 }
                             }
-                            SensorCalibration.stopCalibration(calibration_failed);
                             if(!calibration_failed) {
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                                     if(SensorCalibration.isCalibrating() == 1) {
@@ -357,7 +355,7 @@ public class BluetoothService extends Service {
                                         calib_flat[3] = gyrx.stream().mapToDouble(val -> val).average().orElse(0.0);
                                         calib_flat[4] = gyry.stream().mapToDouble(val -> val).average().orElse(0.0);
                                         calib_flat[5] = gyrz.stream().mapToDouble(val -> val).average().orElse(0.0);
-                                    } else if(SensorCalibration.isCalibrating() == 2) {
+                                    } else if(SensorCalibration.isCalibrating() == 3) {
                                         calib_side[0] = accx.stream().mapToDouble(val -> val).average().orElse(0.0);
                                         calib_side[1] = accy.stream().mapToDouble(val -> val).average().orElse(0.0);
                                         calib_side[2] = accz.stream().mapToDouble(val -> val).average().orElse(0.0);
@@ -367,6 +365,7 @@ public class BluetoothService extends Service {
                                     }
                                 }
                             }
+                            SensorCalibration.stopCalibration(calibration_failed);
 
                         }
 
