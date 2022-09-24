@@ -36,10 +36,11 @@
             android:id="@+id/calibrate_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="100dp"
+            android:paddingBottom="150dp"
+            android:paddingHorizontal="50dp"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
-            android:src="@drawable/calibrationflat" />
+            android:src="@drawable/calibration1" />
 
     </LinearLayout>
 
