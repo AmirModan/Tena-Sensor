@@ -43,12 +43,12 @@ public class SensorCalibration extends AppCompatActivity {
                 instruction.setText("Place the sensor on a flat surface\nWhen ready, tap Calibrate Sensor");
                 calibrateBtn.setEnabled(true);
                 calibrateBtn.setText("Calibrate Sensor");
-                calibrationImg.setImageResource(R.drawable.calibration2);
+                calibrationImg.setImageResource(R.drawable.calibration1);
             } else if(calibrating == 2) {
                 instruction.setText("Place the sensor on its side.\nWhen ready, tap Calibrate Sensor");
                 calibrateBtn.setEnabled(true);
                 calibrateBtn.setText("Calibrate Sensor");
-                calibrationImg.setImageResource(R.drawable.calibrationside);
+                calibrationImg.setImageResource(R.drawable.calibration2);
             } else if(calibrating == 4) {
                 calibrating++;
                 Toast.makeText(getApplicationContext(),"Calibration Successful",Toast.LENGTH_SHORT).show();

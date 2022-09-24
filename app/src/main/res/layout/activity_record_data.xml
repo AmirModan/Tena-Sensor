@@ -15,10 +15,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
         android:orientation="vertical">
 
         <TextView
@@ -36,11 +34,13 @@
 
             <ImageView
                 android:id="@+id/newton"
-                android:layout_width="636px"
-                android:layout_height="718px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="90dp"
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
+                android:src="@drawable/newton_1"
                 />
 
             <ImageView
@@ -57,6 +57,7 @@
                 android:id="@+id/hand_position"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
+                android:padding="10dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:scaleType="fitCenter"
@@ -134,19 +135,6 @@
 
             </FrameLayout>
 
-
-
-            <Button
-                android:id="@+id/continueExercise"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:paddingVertical="20dp"
-                android:background="@color/colorButton"
-                android:text="Perform the next trial"
-                android:textColor="@color/colorBackground"
-                android:visibility="gone"/>
-
             <ImageView
                 android:id="@+id/check"
                 android:layout_width="wrap_content"
@@ -161,12 +149,13 @@
 
         <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <Button
                 android:id="@+id/stop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
                 android:paddingVertical="20dp"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
                 android:background="@color/colorButton"
@@ -174,16 +163,32 @@
                 android:textColor="@color/colorBackground"
                 android:visibility="gone"/>
 
-            <Button
-                android:id="@+id/stopExercise"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/activity_vertical_margin"
-                android:paddingVertical="20dp"
-                android:background="@color/colorButton"
-                android:text="Exit Exercise"
-                android:textColor="@color/colorBackground"
-                android:visibility="gone"/>
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="bottom">
+                <Button
+                    android:id="@+id/continueExercise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="20dp"
+                    android:background="@color/colorButton"
+                    android:text="Perform the next trial"
+                    android:textColor="@color/colorBackground"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/stopExercise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/activity_vertical_margin"
+                    android:paddingVertical="20dp"
+                    android:background="@color/colorButton"
+                    android:text="Exit Exercise"
+                    android:textColor="@color/colorBackground"
+                    android:visibility="gone"/>
+            </LinearLayout>
 
         </FrameLayout>
 
