@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "TenaSensor.Android.app-mergeDebugResources-30:/values-large-v4/values-large-v4.xml",
+            "outputFile": "TenaSensor.Android.app-mergeDebugResources-35:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\values-large\\dimens.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "56",
-                        "endColumns": "43",
-                        "endOffsets": "95"
-                    },
-                    "to": {
-                        "startLines": "9",
-                        "startColumns": "4",
-                        "startOffsets": "532",
-                        "endColumns": "43",
-                        "endOffsets": "571"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\f078940e11213e8cf03d1d26422c61cd\\transformed\\material-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\b14b36005d6ef56d2c79d602f63f9417\\transformed\\material-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,10",
                         "startColumns": "4,4,4,4",
@@ -40,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\b4121646e6e4049ea4b76ea65112481e\\transformed\\appcompat-1.4.2\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\6def8af451405e571a08465e493ce6a4\\transformed\\appcompat-1.5.1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -54,6 +37,23 @@
                         "startOffsets": "55,114,185,256,326,396,464,576,680",
                         "endColumns": "58,70,70,69,69,67,67,103,115",
                         "endOffsets": "109,180,251,321,391,459,527,675,791"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\values-large\\dimens.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "56",
+                        "endColumns": "43",
+                        "endOffsets": "95"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "532",
+                        "endColumns": "43",
+                        "endOffsets": "571"
                     }
                 }
             ]

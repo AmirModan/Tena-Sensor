@@ -29,8 +29,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
-        final EditText etUsername = (EditText) findViewById(R.id.etUsername);
-        final EditText etPassword = (EditText) findViewById(R.id.etPassword);
         final TextView register = (TextView) findViewById(R.id.Register);
         final TextView signIn = (TextView) findViewById(R.id.SignIn);
         final Button gRegister = (Button) findViewById(R.id.Register_Google);
@@ -39,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent continueIntent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent continueIntent = new Intent(LoginActivity.this, LinkedInLogin.class);
                 LoginActivity.this.startActivity(continueIntent);
             }
         });
@@ -67,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Intent registerIntent = new Intent(LoginActivity.this, LinkedInLogin.class);
                 //LoginActivity.this.startActivity(registerIntent);
-                Intent continueIntent = new Intent(LoginActivity.this, LinkedInLogin.class);
+                Intent continueIntent = new Intent(LoginActivity.this, MainActivity.class);
                 LoginActivity.this.startActivity(continueIntent);
             }
         });

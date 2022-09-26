@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "TenaSensor.Android.app-mergeDebugResources-30:/values-v18/values-v18.xml",
+            "outputFile": "TenaSensor.Android.app-mergeDebugResources-35:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\b4121646e6e4049ea4b76ea65112481e\\transformed\\appcompat-1.4.2\\res\\values-v18\\values-v18.xml",
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\6def8af451405e571a08465e493ce6a4\\transformed\\appcompat-1.5.1\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

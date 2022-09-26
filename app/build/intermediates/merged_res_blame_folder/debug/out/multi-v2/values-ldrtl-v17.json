@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "TenaSensor.Android.app-mergeDebugResources-30:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "TenaSensor.Android.app-mergeDebugResources-35:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\f078940e11213e8cf03d1d26422c61cd\\transformed\\material-1.6.1\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\b14b36005d6ef56d2c79d602f63f9417\\transformed\\material-1.6.1\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

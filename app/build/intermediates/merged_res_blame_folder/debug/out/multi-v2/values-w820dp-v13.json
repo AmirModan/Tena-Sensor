@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "TenaSensor.Android.app-mergeDebugResources-30:/values-w820dp-v13/values-w820dp-v13.xml",
+            "outputFile": "TenaSensor.Android.app-mergeDebugResources-35:/values-w820dp-v13/values-w820dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\values-w820dp\\dimens.xml",

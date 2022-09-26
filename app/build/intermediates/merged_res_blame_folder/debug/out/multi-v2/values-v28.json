@@ -1,17 +1,17 @@
 {
     "logs": [
         {
-            "outputFile": "TenaSensor.Android.app-mergeDebugResources-30:/values-v28/values-v28.xml",
+            "outputFile": "TenaSensor.Android.app-mergeDebugResources-35:/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\b4121646e6e4049ea4b76ea65112481e\\transformed\\appcompat-1.4.2\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\6def8af451405e571a08465e493ce6a4\\transformed\\appcompat-1.5.1\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "55,130,217,447",
+                        "startOffsets": "55,130,217,397",
                         "endLines": "2,3,7,11",
                         "endColumns": "74,86,12,12",
-                        "endOffsets": "125,212,442,684"
+                        "endOffsets": "125,212,392,584"
                     },
                     "to": {
                         "startLines": "14,15,16,20",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\f078940e11213e8cf03d1d26422c61cd\\transformed\\material-1.6.1\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\b14b36005d6ef56d2c79d602f63f9417\\transformed\\material-1.6.1\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",

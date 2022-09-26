@@ -216,7 +216,21 @@ public class BluetoothService extends Service {
 
                         long unixTime = System.currentTimeMillis() / 1000L;
 
-                        AWS_Request request = new AWS_Request(accx, accy, accz, gyrx, gyry, gyrz, ExerciseSelection.getExercise(),ExercisePerform.getTrial()-1,1,unixTime);
+                        int id = 0;
+
+                        if(LoginActivity.user.equals("Charmayne")) {
+                            id = 1;
+                        } else if(LoginActivity.user.equals("Helena")) {
+                            id = 2;
+                        } else if(LoginActivity.user.equals("Mira")) {
+                            id = 3;
+                        } else if(LoginActivity.user.equals("Katelyn")) {
+                            id = 4;
+                        } else if(LoginActivity.user.equals("Matteo")) {
+                            id = 5;
+                        }
+
+                        AWS_Request request = new AWS_Request(accx, accy, accz, gyrx, gyry, gyrz, ExerciseSelection.getExercise(),ExercisePerform.getTrial()-1,id,unixTime);
                         // The Lambda function invocation results in a network call.
                         // Make sure it is not called from the main thread.
                         new AsyncTask<AWS_Request, Void, AWS_Response>() {

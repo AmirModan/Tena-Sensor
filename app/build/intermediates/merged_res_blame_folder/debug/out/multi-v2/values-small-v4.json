@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "TenaSensor.Android.app-mergeDebugResources-30:/values-small-v4/values-small-v4.xml",
+            "outputFile": "TenaSensor.Android.app-mergeDebugResources-35:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\admin\\Documents\\AndroidStudio\\TenaSensor\\app\\src\\main\\res\\values-small\\dimens.xml",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\f078940e11213e8cf03d1d26422c61cd\\transformed\\material-1.6.1\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\b14b36005d6ef56d2c79d602f63f9417\\transformed\\material-1.6.1\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

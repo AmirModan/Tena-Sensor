@@ -2962,10 +2962,6 @@ id info
 id invisible
 id inward
 id italic
-id item1
-id item2
-id item3
-id item4
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
@@ -3261,6 +3257,7 @@ id view_offset_helper
 id view_pager
 id view_transition
 id view_tree_lifecycle_owner
+id view_tree_on_back_pressed_dispatcher_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
@@ -3487,8 +3484,6 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout upload_dialog
-menu example_menu
-menu example_menu2
 menu menu_main
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -3496,6 +3491,7 @@ mipmap myocolors
 mipmap sfsugators
 plurals mtrl_badge_content_description
 raw block_video
+raw firebase_common_keep
 raw welcome_sound
 string abc_action_bar_home_description
 string abc_action_bar_up_description

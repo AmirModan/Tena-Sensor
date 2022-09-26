@@ -36,16 +36,16 @@ public class RegisterActivity extends AppCompatActivity {
                 String password= pass_word.getText().toString().trim();
                 if(email.isEmpty())
                 {
-                    user_name.setError("Email is empty");
+                    user_name.setError("Username is required");
                     user_name.requestFocus();
                     return;
                 }
-                if(!Patterns.EMAIL_ADDRESS.matcher(email).matches())
+                /*if(!Patterns.EMAIL_ADDRESS.matcher(email).matches())
                 {
-                    user_name.setError("Enter valid email address");
+                    user_name.setError("Enter a valid email address");
                     user_name.requestFocus();
                     return;
-                }
+                }*/
                 if(password.isEmpty())
                 {
                     pass_word.setError("Enter password");
@@ -54,16 +54,17 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 if(password.length()<6)
                 {
-                    pass_word.setError("Length of password should be more than 6");
+                    pass_word.setError("Password must be at least 6 characters long");
                     pass_word.requestFocus();
                     return;
                 }
-                mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                mAuth.createUserWithEmailAndPassword(email + "@tena.com",password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
                             Toast.makeText(RegisterActivity.this,"You are successfully Registered", Toast.LENGTH_SHORT).show();
+                            LoginActivity.user = email;
                             Intent continueIntent = new Intent(RegisterActivity.this, MainActivity.class);
                             RegisterActivity.this.startActivity(continueIntent);
                         }
