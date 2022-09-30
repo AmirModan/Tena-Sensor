@@ -6,6 +6,15 @@
     android:background="@color/colorBackground"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:gravity="center"
+        android:text="@string/sensorCalibration"
+        android:textSize="@dimen/fontSize"
+        android:textColor="@color/colorText"/>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
@@ -51,7 +60,7 @@
             android:paddingBottom="20dp"
             android:gravity="center"
             android:textColor="@color/colorText"
-            android:textSize="20dp"
+            android:textSize="@dimen/fontSize"
             android:text="@string/calibrationInstructionString" />
 
         <Button

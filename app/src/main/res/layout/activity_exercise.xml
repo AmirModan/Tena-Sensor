@@ -30,7 +30,7 @@
             android:maxLines="1"
             android:textStyle="bold"
             android:layout_gravity="center"
-            android:textSize="20dp"
+            android:textSize="@dimen/fontSize"
             android:textColor="@color/colorText"/>
 
         <FrameLayout

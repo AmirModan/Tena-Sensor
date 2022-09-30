@@ -236,7 +236,7 @@
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:gravity="center"
                 android:text="Click the icon to connect your sensor"
-                android:textSize="20dp"
+                android:textSize="@dimen/fontSize"
                 android:textColor="@color/colorText"/>
         </LinearLayout>
 

@@ -111,7 +111,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/btnFinishPairingString"
-            android:textSize="15dp"
+            android:textSize="@dimen/fontSize"
             android:layout_gravity="bottom"
             android:layout_marginVertical="@dimen/activity_vertical_margin"
             android:layout_marginHorizontal="70dp"

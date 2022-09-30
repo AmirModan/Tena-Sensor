@@ -46,6 +46,7 @@
     <string name="stopCollectionString">Stop Data Collection</string>
 
     <!-- activity_calibration.xml String Resources -->
+    <string name="sensorCalibration">Sensor Calibration</string>
     <string name="calibrationInstructionString">Place the sensor on a flat surface\nWhen ready, tap Calibrate Sensor</string>
     <string name="btnStartCalibrateString">Calibrate Sensor</string>
     <string name="selectExerciseString">Select an Exercise to Perform</string>
