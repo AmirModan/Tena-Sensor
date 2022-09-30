@@ -1,10 +1,27 @@
 <resources>
+    <!-- activity_bluetooth.xml String Resources -->
+    <string name="btnCalibrateSensorString">Calibrate Sensor</string>
+    <string name="btnSensorExercisesString">Sensor Exercises</string>
+    <string name="btnConnectToSensorString">Connect to Sensor</string>
+
+    <!-- activity_login_firebase.xml & activity_create_account.xml String Resources -->
+    <string name="btnSignInString">Sign In</string>
+    <string name="btnRegisterString">Register</string>
+    <string name="btnLogInString">LOG IN</string>
+    <string name="btnLogInToSignUpString">Don\'t have an account? Sign Up</string>
+    <string name="passwordLoginString">Password</string>
+    <string name="usernameLoginString">Username</string>
+
+    <!-- activity_login.xml String Resources -->
     <string name="login_title">T\'ena Sensor - Login</string>
     <string name="register_title">T\'ena Sensor - Register</string>
     <string name="app_name">T\'ena Sensor</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_list">Bluetooth Devices</string>
     <string name="web_client_id">855402615060-4trvhemml151pl1pdiunglmf70ualse1.apps.googleusercontent.com</string>
+
+    <!-- activity_instructions String Resources -->
+    <string name="instructionsHeaderString">Instructions</string>
     <string name="block_instructions"><li>Place your hand flat on the table.</li>
         \n\n<li>On the green \'go\' signal, grasp the block and place it on the top of the shelf.</li>
         \n\n<li>Return your hand to the table.</li>
@@ -21,27 +38,24 @@
         \n\n<li>On the green \'go\' signal, grasp the block and place it on the top of the shelf.</li>
         \n\n<li>Return your hand to the table.</li>
     </string>
+    <string name="btnGoToDataCollectionString">Click to Collect Data</string>
+
+    <!-- activity_record_data.xml String Resources -->
     <string name="stopExerciseString">Exit Exercise</string>
     <string name="nextTrialString">Perform the next trial</string>
     <string name="stopCollectionString">Stop Data Collection</string>
-    <string name="btnCalibrateSensorString">Calibrate Sensor</string>
-    <string name="btnSensorExercisesString">Sensor Exercises</string>
-    <string name="btnConnectToSensorString">Connect to Sensor</string>
-    <string name="btnLogInString">LOG IN</string>
-    <string name="btnLogInToSignUpString">Don\'t have an account? Sign Up</string>
-    <string name="passwordLoginString">Password</string>
-    <string name="usernameLoginString">Username</string>
+
+    <!-- activity_calibration.xml String Resources -->
     <string name="calibrationInstructionString">Place the sensor on a flat surface\nWhen ready, tap Calibrate Sensor</string>
     <string name="btnStartCalibrateString">Calibrate Sensor</string>
     <string name="selectExerciseString">Select an Exercise to Perform</string>
-    <string name="instructionsHeaderString">Instructions</string>
-    <string name="btnGoToDataCollectionString">Click to Collect Data</string>
-    <string name="slogan">Bringing rehabilitation\nfrom the clinic to your home</string>
-    <string name="btnSignInString">Sign In</string>
-    <string name="btnRegisterString">Register</string>
+
+    <!-- fragment_bluetooth.xml String Resources -->
     <string name="listOfDevicesHeader">List of devices</string>
     <string name="devicePairingHeader">Choose the device you want to pair with</string>
     <string name="availableDevicesHeader">AVAILABLE DEVICES</string>
     <string name="connectionSuccessfulMessage">Your T\'ena Sensor has now been successfully connected.</string>
     <string name="btnFinishPairingString">Finish</string>
+
+    <string name="slogan">Bringing rehabilitation\nfrom the clinic to your home</string>
 </resources>
