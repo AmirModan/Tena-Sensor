@@ -44,12 +44,12 @@
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-main-39:\\drawable\\ic_train_button.xml"
     },
     {
-        "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\mipmap-xxhdpi_myocolors.png.flat",
-        "source": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-main-39:\\mipmap-xxhdpi\\myocolors.png"
-    },
-    {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\menu_menu_main.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-main-39:\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\mipmap-xxhdpi_myocolors.png.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-main-39:\\mipmap-xxhdpi\\myocolors.png"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -108,6 +108,10 @@
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-main-39:\\drawable\\newton_3.png"
     },
     {
+        "merged": "TenaSensor.Android.app-merged_res-37:/layout_activity_instructions.xml.flat",
+        "source": "TenaSensor.Android.app-main-39:/layout/activity_instructions.xml"
+    },
+    {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\layout_activity_bluetooth.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-main-39:\\layout\\activity_bluetooth.xml"
     },
@@ -128,6 +132,10 @@
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-main-39:\\drawable\\ic_cloud.xml"
     },
     {
+        "merged": "TenaSensor.Android.app-merged_res-37:/layout_linkedin_login.xml.flat",
+        "source": "TenaSensor.Android.app-main-39:/layout/linkedin_login.xml"
+    },
+    {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-main-39:\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
@@ -142,6 +150,10 @@
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\layout_fragment_classification.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-main-39:\\layout\\fragment_classification.xml"
+    },
+    {
+        "merged": "TenaSensor.Android.app-merged_res-37:/layout_activity_exercise.xml.flat",
+        "source": "TenaSensor.Android.app-main-39:/layout/activity_exercise.xml"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\mipmap-xhdpi_ic_launcher_round.png.flat",
@@ -264,6 +276,10 @@
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-main-39:\\drawable\\ic_open_file.xml"
     },
     {
+        "merged": "TenaSensor.Android.app-merged_res-37:/layout_activity_login.xml.flat",
+        "source": "TenaSensor.Android.app-main-39:/layout/activity_login.xml"
+    },
+    {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\layout-large_mytextview.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-main-39:\\layout-large\\mytextview.xml"
     },
@@ -344,8 +360,16 @@
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-main-39:\\drawable\\toggle_sensor.xml"
     },
     {
+        "merged": "TenaSensor.Android.app-merged_res-37:/layout_activity_create_account.xml.flat",
+        "source": "TenaSensor.Android.app-main-39:/layout/activity_create_account.xml"
+    },
+    {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\layout_fragment_feature.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-main-39:\\layout\\fragment_feature.xml"
+    },
+    {
+        "merged": "TenaSensor.Android.app-merged_res-37:/layout_activity_login_firebase.xml.flat",
+        "source": "TenaSensor.Android.app-main-39:/layout/activity_login_firebase.xml"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\drawable_settings.PNG.flat",
@@ -370,6 +394,10 @@
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\mipmap-hdpi_sfsugators.png.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-main-39:\\mipmap-hdpi\\sfsugators.png"
+    },
+    {
+        "merged": "TenaSensor.Android.app-merged_res-37:/layout_activity_calibration.xml.flat",
+        "source": "TenaSensor.Android.app-main-39:/layout/activity_calibration.xml"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\layout_fragment_imu.xml.flat",
@@ -398,6 +426,14 @@
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\drawable_outreach_home.png.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-main-39:\\drawable\\outreach_home.png"
+    },
+    {
+        "merged": "TenaSensor.Android.app-merged_res-37:/layout_activity_bluetooth.xml.flat",
+        "source": "TenaSensor.Android.app-main-39:/layout/activity_bluetooth.xml"
+    },
+    {
+        "merged": "TenaSensor.Android.app-merged_res-37:/layout_activity_welcome.xml.flat",
+        "source": "TenaSensor.Android.app-main-39:/layout/activity_welcome.xml"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\layout_myradioview.xml.flat",
@@ -470,6 +506,10 @@
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\drawable_circle_timer.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-main-39:\\drawable\\circle_timer.xml"
+    },
+    {
+        "merged": "TenaSensor.Android.app-merged_res-37:/layout_fragment_bluetooth.xml.flat",
+        "source": "TenaSensor.Android.app-main-39:/layout/fragment_bluetooth.xml"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.4\\TenaSensor.Android.app-merged_res-37:\\drawable_register_linkedin.PNG.flat",

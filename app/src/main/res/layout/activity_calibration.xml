@@ -12,16 +12,6 @@
         android:visibility="visible"
         android:background="@color/colorText"/>
 
-    <TextView
-        android:id="@+id/calibrate_instructions"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingVertical="50dp"
-        android:gravity="center"
-        android:textColor="@color/colorText"
-        android:textSize="20dp"
-        android:text="@string/calibrationInstructionString" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -52,6 +42,17 @@
         android:gravity="bottom"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin">
+
+
+        <TextView
+            android:id="@+id/calibrate_instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:gravity="center"
+            android:textColor="@color/colorText"
+            android:textSize="20dp"
+            android:text="@string/calibrationInstructionString" />
 
         <Button
             android:id="@+id/calibrate"
