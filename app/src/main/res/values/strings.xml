@@ -21,4 +21,27 @@
         \n\n<li>On the green \'go\' signal, grasp the block and place it on the top of the shelf.</li>
         \n\n<li>Return your hand to the table.</li>
     </string>
+    <string name="stopExerciseString">Exit Exercise</string>
+    <string name="nextTrialString">Perform the next trial</string>
+    <string name="stopCollectionString">Stop Data Collection</string>
+    <string name="btnCalibrateSensorString">Calibrate Sensor</string>
+    <string name="btnSensorExercisesString">Sensor Exercises</string>
+    <string name="btnConnectToSensorString">Connect to Sensor</string>
+    <string name="btnLogInString">LOG IN</string>
+    <string name="btnLogInToSignUpString">Don\'t have an account? Sign Up</string>
+    <string name="passwordLoginString">Password</string>
+    <string name="usernameLoginString">Username</string>
+    <string name="calibrationInstructionString">Place the sensor on a flat surface\nWhen ready, tap Calibrate Sensor</string>
+    <string name="btnStartCalibrateString">Calibrate Sensor</string>
+    <string name="selectExerciseString">Select an Exercise to Perform</string>
+    <string name="instructionsHeaderString">Instructions</string>
+    <string name="btnGoToDataCollectionString">Click to Collect Data</string>
+    <string name="slogan">Bringing rehabilitation\nfrom the clinic to your home</string>
+    <string name="btnSignInString">Sign In</string>
+    <string name="btnRegisterString">Register</string>
+    <string name="listOfDevicesHeader">List of devices</string>
+    <string name="devicePairingHeader">Choose the device you want to pair with</string>
+    <string name="availableDevicesHeader">AVAILABLE DEVICES</string>
+    <string name="connectionSuccessfulMessage">Your T\'ena Sensor has now been successfully connected.</string>
+    <string name="btnFinishPairingString">Finish</string>
 </resources>

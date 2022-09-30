@@ -34,7 +34,7 @@
             android:gravity="center"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:textSize="25dp"
-            android:text="List of devices"
+            android:text="@string/listOfDevicesHeader"
             android:textColor="@color/colorText"/>
         <View
             android:layout_width="match_parent"
@@ -47,14 +47,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Choose the device you want to pair with"
+            android:text="@string/devicePairingHeader"
             android:padding="@dimen/activity_vertical_margin"
             android:textColor="@color/colorText"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="AVAILABLE DEVICES"
+            android:text="@string/availableDevicesHeader"
             android:textColor="@color/colorText"/>
 
         <ListView
@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginVertical="60dp"
-        android:text="Your T'ena Sensor has now been successfully connected."
+        android:text="@string/connectionSuccessfulMessage"
         android:textSize="25dp"
         android:padding="@dimen/activity_vertical_margin"
         android:visibility="gone"
@@ -110,11 +110,12 @@
             android:id="@+id/FinishBT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Finish"
+            android:text="@string/btnFinishPairingString"
             android:textSize="15dp"
             android:layout_gravity="bottom"
             android:layout_marginVertical="@dimen/activity_vertical_margin"
             android:layout_marginHorizontal="70dp"
+            android:padding="@dimen/button_padding"
             android:background="@color/DarkGrey"
             android:textColor="@color/colorText">
         </Button>

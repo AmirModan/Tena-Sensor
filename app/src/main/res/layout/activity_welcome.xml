@@ -15,7 +15,7 @@
         android:layout_marginEnd="-2dp"
         android:layout_marginBottom="117dp"
         android:gravity="center"
-        android:text="Bringing Rehabilitation\nfrom the clinic to your home"
+        android:text="@string/slogan"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:visibility="visible" />

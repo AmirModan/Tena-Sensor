@@ -20,7 +20,7 @@
         android:gravity="center"
         android:textColor="@color/colorText"
         android:textSize="20dp"
-        android:text="Place the sensor on a flat surface\nWhen ready, tap Calibrate Sensor" />
+        android:text="@string/calibrationInstructionString" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,9 +57,9 @@
             android:id="@+id/calibrate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingVertical="20dp"
+            android:paddingVertical="@dimen/button_padding"
             android:background="@color/colorButton"
-            android:text="Calibrate Sensor"
+            android:text="@string/btnStartCalibrateString"
             android:textColor="@color/colorBackground" />
 
     </LinearLayout>
